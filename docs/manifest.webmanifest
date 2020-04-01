@@ -1,0 +1,17 @@
+{
+  "lang": "en",
+  "short_name": "Breath",
+  "name": "Breath Web App",
+  "description": "A breathing Web App | © Nick Freear, 01-April-2020 | License: MIT.",
+  "display": "fullscreen",
+  "start_url": ".",
+  "background_color": "#005060",
+  "theme_color": "#eee",
+  "icons": [
+    {
+      "src": "lib/icon.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}

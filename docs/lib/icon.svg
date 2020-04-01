@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg>
+<svg viewBox="0 0 100 100" height="192" width="192" xmlns="http://www.w3.org/2000/svg" xml:lang="en">
+
+  <title> Breath Web App icon </title>
+  <desc>
+    © Nick Freear, 01-April-2020 | License: MIT.
+
+    * See :~ https://gist.github.com/nfreear/c8666ec92360d09c4f6d559a4e4d55ec
+  </desc>
+
+  <defs>
+    <style>
+      .Teal      { fill: #008080; }
+      .Dark-Teal { fill: #005060; }
+      .Off-White { fill: #DDD;    }
+      .Silver    { fill: #C0C0C0; }
+    </style>
+  </defs>
+
+  <rect class="Dark-Teal" x="0" y="0" width="100%" height="100%" />
+
+  <circle id="breath" class="Off-White" cx="50%" cy="50%" r="35%">
+    <title> Click to breath! </title>
+  </circle>
+
+</svg>

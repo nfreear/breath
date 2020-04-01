@@ -1,0 +1,78 @@
+
+html,
+body {
+  background-color: #005060;
+  color: #fff;
+  font: 1.2rem sans-serif;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+a#fork-me {
+  border-bottom: 2px dotted transparent;
+  bottom: .6rem;
+  color: #ccc;
+  letter-spacing: .1rem;
+  padding: 1rem;
+  position: absolute;
+  right: .6rem;
+  text-decoration: none;
+}
+
+a#fork-me:focus,
+a#fork-me:hover {
+  background: #003040;
+  border-color: #999;
+  color: #eee;
+  -X-opacity: .7;
+  transition: all 3s;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* SVG styles.
+*/
+
+body > svg {
+  height: 100%;
+  width: 100%;
+}
+
+.Teal {
+  fill: #008080;
+}
+
+.Dark-Teal {
+  fill: #005060;
+}
+
+.Off-White {
+  fill: #DDD;
+}
+
+.Silver {
+  fill: #C0C0C0;
+}
+
+[ role = button ] {
+  cursor: pointer;
+}
+
+a > text {
+  fill: #FFF;
+  font: .9rem sans-serif;
+}
+
+a:hover > text {
+  text-decoration: underline;
+}

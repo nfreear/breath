@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title> Breath Web App </title>
+
+  <link href="manifest.webmanifest" rel="manifest" />
+  <link href="lib/style.css" rel="stylesheet" />
+
+  <svg
+    viewBox="0 0 100 100"
+    width="100%" height="100%"
+    preserveAspectRatio="xMidYMid meet"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:lang="en"
+    >
+    <title> Breathing Animation (Web App) </title>
+
+    <desc>
+      © Nick Freear, 01-April-2020 | License: GPL-3.0+.
+    </desc>
+
+    <!-- <rect class="Dark-Teal" x="0" y="0" width="100%" height="100%" /> -->
+
+    <circle id="breath" class="Off-White" cx="50%" cy="50%" r="10%" role="button" tabindex="0">
+      <title>&#10; Click to breath! &#10;</title>
+    </circle>
+
+    <!-- <a xlink:href="https://gist.github.com/nfreear/c8666ec92360d09c4f6d559a4e4d55ec" target="_blank">
+      <text x="78%" y="97%">© Nick Freear</text>
+      <title>Breathing Web App &#10;&#10; © 2020 Nick Freear | License: MIT &#10;&#10; — Link opens in a new window. </title>
+    </a> -->
+
+    <animate
+      id="breath-in-anim"
+      xlink:href="#breath"
+      attributeType=""
+      attributeName="r"
+      from="10%"
+      to="30%"
+      dur="5s"
+      begin="click"
+      fill="freeze"
+      data-X-repeatCount="indefinite" />
+
+    <animate
+      id="breath-out-anim"
+      xlink:href="#breath"
+      attributeType=""
+      attributeName="r"
+      from="30%"
+      to="10%"
+      dur="5s"
+      fill="freeze"
+      begin="breath-in-anim.end + 1s" />
+
+  </svg>
+
+  <a
+    id="fork-me"
+    target="_blank"
+    href="https://github.com/nfreear/breath#readme"
+    title="Breath Web App &#10;&#10; © 2020 Nick Freear | License: GPL-3.0+ &#10;&#10; — Link opens in a new window."
+  ><i class="sr-only">About </i>Breath</a>
+
+  <script src="lib/index.js" type="module" ></script>
+
+  <!--
+    Gist :~ https://gist.github.com/nfreear/c8666ec92360d09c4f6d559a4e4d55ec
+  -->
+
+</html>

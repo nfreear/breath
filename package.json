@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "name": "breath-web-app",
+  "description": "A breathing Web App.",
+  "version": "0.8.0-beta",
+  "license": "GPL-3.0+",
+  "homepage": "https://nfreear.github.io/breath",
+  "repository": "https://github.com/nfreear/breath.git",
+  "author": "Nick Freear",
+  "scripts": {
+    "start": "live-server --port=9001 --open=./docs/ --watch=./docs/ --no-browser",
+    "test": "semistandard"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "semistandard": "^14.2.0"
+  }
+}
