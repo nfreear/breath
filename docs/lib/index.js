@@ -1,7 +1,6 @@
-/**
- *
- * @copyright © Nick Freear, 01-April-2020 | License: GPL-3.0+.
- */
+/*!
+  Breath Web App | © Nick Freear | License: GPL-3.0+.
+*/
 
 /* eslint-disable */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -13,6 +12,7 @@
 const ga = window.ga;
 const NAV = window.navigator;
 const PATH = window.location.pathname;
+const $PAUSE_BTN = document.querySelector('#pause-btn');
 const $BREATH = document.querySelector('#breath');
 const $BREATH_IN = document.querySelector('#breath-in-anim');
 // const $BREATH_OUT = document.querySelector('#breath-out-anim');
@@ -32,6 +32,13 @@ ga('send', 'pageview');
       // $BREATH_OUT.setAttribute('begin', '');
     }
   });
+});
+
+$PAUSE_BTN.addEventListener('click', ev => {
+  ev.preventDefault();
+  console.warn('Breath App: pause / reload', ev);
+
+  window.location.reload(false);
 });
 
 /**

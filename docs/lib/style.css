@@ -1,6 +1,8 @@
 
 :root {
   --dark-teal: #004050;
+  --off-white: #DDD;
+  --mid-grey: #999;
 }
 
 html,
@@ -15,10 +17,40 @@ body {
   width: 100%;
 }
 
+a {
+  color: var(--off-white);
+}
+
+a:focus,
+a:hover {
+  color: #eee;
+  transition: all 3s;
+}
+
+/* https://css-tricks.com/making-pure-css-playpause-button/
+*/
+a#pause-btn {
+  bottom: 1.2rem;
+  display: block;
+  left: 1.2rem;
+  position: absolute;
+  height: 2.3rem;
+  width: 1rem;
+  border-style: solid;
+  -X-border-width: 1rem;
+  border-color: var(--mid-grey);
+  border-style: double;
+  border-width: 0 0 0 1.9rem;
+}
+
+a#pause-btn:focus,
+a#pause-btn:hover {
+  border-color: #eee;
+}
+
 a#fork-me {
   border-bottom: 3px dotted transparent;
   bottom: .6rem;
-  color: #ccc;
   letter-spacing: .1rem;
   padding: 1rem;
   position: absolute;
@@ -29,9 +61,7 @@ a#fork-me {
 a#fork-me:focus,
 a#fork-me:hover {
   background: #003040;
-  border-color: #999;
-  color: #eee;
-  transition: all 3s;
+  border-color: var(--mid-grey);
 }
 
 .sr-only {
@@ -63,7 +93,7 @@ body > svg {
 }
 
 .Off-White {
-  fill: #DDD;
+  fill: var(--off-white);
 }
 
 .Silver {

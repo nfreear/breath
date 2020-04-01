@@ -5,7 +5,7 @@
 
 /* eslint-env worker */
 
-const PATH = location.pathname.replace(/\/[^\/]+$/, ''); // '/docs/lib/service-worker.js'
+const PATH = location.pathname.replace(/\/[^/]+$/, ''); // '/docs/lib/service-worker.js'
 const CACHE_NAME = 'breath-app-cache';
 
 console.warn('Worker: location', PATH, location);
