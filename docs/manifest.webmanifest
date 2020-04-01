@@ -5,7 +5,7 @@
   "description": "A Web App to help you focus on and calm your breathing. | © Nick Freear, 01-April-2020 | License: GPL.",
   "display": "fullscreen",
   "start_url": ".",
-  "background_color": "#005060",
+  "background_color": "#004050",
   "theme_color": "#eee",
   "icons": [
     {

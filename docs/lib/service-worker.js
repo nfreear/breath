@@ -5,9 +5,10 @@
 
 /* eslint-env worker */
 
-const PATH = window.location.pathname;
-// const CACHES = window.caches;
+const PATH = location.pathname.replace(/\/[^\/]+$/, ''); // '/docs/lib/service-worker.js'
 const CACHE_NAME = 'breath-app-cache';
+
+console.warn('Worker: location', PATH, location);
 
 self.addEventListener('install', event => {
   console.warn('Breath App: install.', CACHE_NAME, event);
@@ -16,9 +17,9 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll(
         [
-          `${PATH}lib/icon.svg`,
-          `${PATH}lib/index.js`,
-          `${PATH}lib/style.css`
+          `${PATH}/icon.svg`,
+          `${PATH}/index.js`,
+          `${PATH}/style.css`
           // '/offline.html'
         ]
       );
