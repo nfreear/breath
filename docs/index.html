@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="paused">
 
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -13,42 +13,20 @@
   <link href="lib/style.css" rel="stylesheet" />
   <link href="lib/icon.svg" rel="icon" />
 
-  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg xmlns="http://www.w3.org/2000/svg">
 
-    <circle id="breath" class="Off-White" cx="50%" cy="50%" r="" role="button" tabindex="0">
+    <circle id="breath" class="Off-White" cx="50%" cy="50%" r="1%" role="button" tabindex="0">
       <title>&#10; Click to breath! &#10;</title>
     </circle>
-
-    <!-- <animate
-      id="breath-in-anim"
-      xlink:href="#breath"
-      attributeType=""
-      attributeName="r"
-      from="6%"
-      to="33%"
-      dur="5s"
-      begin="click"
-      fill="freeze"
-      data-X-repeatCount="indefinite" />
-
-    <animate
-      id="breath-out-anim"
-      xlink:href="#breath"
-      attributeType=""
-      attributeName="r"
-      from="33%"
-      to="6%"
-      dur="5s"
-      fill="freeze"
-      begin="breath-in-anim.end + 1s" /> -->
 
   </svg>
 
   <a
     id="pause-btn"
-    href="#!-pause"
+    data-href="#!-pause"
     title="&#10; PAUSE &#10;"
     role="button"
+    tabindex="0"
   ><i class="sr-only">Pause</i></a>
 
   <a

@@ -15,8 +15,6 @@ const PATH = window.location.pathname;
 const $HTML = document.querySelector('html');
 const $PAUSE_BTN = document.querySelector('#pause-btn');
 const $BREATH = document.querySelector('#breath');
-// const $BREATH_IN = document.querySelector('#breath-in-anim');
-// const $BREATH_OUT = document.querySelector('#breath-out-anim');
 
 ga('create', 'UA-8330079-9', 'auto');
 ga('send', 'pageview');
@@ -25,14 +23,14 @@ let isPlaying = false;
 
 ['click', 'keypress'].map(evName => {
   $BREATH.addEventListener(evName, ev => togglePlayPause(ev));
-});
 
-$PAUSE_BTN.addEventListener('click', ev => togglePlayPause(ev));
+  $PAUSE_BTN.addEventListener(evName, ev => togglePlayPause(ev));
+});
 
 function togglePlayPause (ev) {
   ev.preventDefault();
 
-  console.warn('Breath App: click to breath!', ev);
+  console.warn(`Breath App: ${isPlaying ? 'PAUSE' : 'PLAY'}`, ev);
 
   $HTML.classList.remove(isPlaying ? 'playing' : 'paused');
   $HTML.classList.add(isPlaying ? 'paused' : 'playing');
