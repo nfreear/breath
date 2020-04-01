@@ -5,6 +5,8 @@
 
 A Web App to help you concentrate on and calm your breathing.
 
+_Resonant breathing biofeedback training_ has [been shown][doi] to be [beneficial][wp] to ameliorate stress.
+
 Currently implemented using [SVG + SMIL animation][smil].
 
  * [Original gist][gist]
@@ -17,8 +19,14 @@ Currently implemented using [SVG + SMIL animation][smil].
 ---
 License: [GPL][]
 
+[wp]: https://en.wikipedia.org/wiki/Biofeedback#Stress_reduction
+[doi]: https://doi.org/10.1080%2F10803548.2012.11076959
+"A.P. Sutarto, M.N.A Wahab & N.M. Zin (2012) Resonant Breathing Biofeedback Training for Stress Reduction Among Manufacturing Operators, Internat. J. of Occupational Safety and Ergonomics, 18:4, 549-561, DOI: 10.1080/10803548.2012.11076959"
+[eddie]: https://eddiestern.com/the-breathing-app/
 [android]: https://play.google.com/store/apps/details?id=org.ayny.breathingapp#
-  "The Breathing App, on Google Play."
+  "The Breathing App, on Google Play for Android."
+[ios]: https://apps.apple.com/us/app/the-breathing-app/id1285982210
+  "The Breathing App, on the Apple App Store for iOS."
 [sergey]: https://play.google.com/store/apps/developer?id=Sergey+Varichev
 [video]: https://youtu.be/xXpsoGHnEiU?list=UUNMy2KojFn0jMbxbHZVppGw&index=4#
   "Breathing App Quick Start, 2017, on YouTube."
