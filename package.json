@@ -4,7 +4,7 @@
   "description": "A Web App to help you focus on and calm your breathing.",
   "version": "0.8.0-beta",
   "license": "GPL-3.0+",
-  "homepage": "https://nfreear.github.io/breath",
+  "homepage": "https://nfreear.github.io/breath/",
   "repository": "https://github.com/nfreear/breath.git",
   "author": "Nick Freear",
   "scripts": {

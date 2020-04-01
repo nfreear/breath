@@ -1,8 +1,6 @@
 
 html,
 body {
-  background-color: #005060;
-  color: #fff;
   font: 1.2rem sans-serif;
   margin: 0;
   height: 100%;
@@ -53,6 +51,8 @@ body > svg {
 }
 
 .Dark-Teal {
+  background-color: #005060;
+  color: #fff;
   fill: #005060;
 }
 

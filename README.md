@@ -3,9 +3,12 @@
 
 # Breath #
 
-A Web App to help you focus on and calm your breathing.
+A Web App to help you focus on and calm your breathing,
 
-_Resonant breathing biofeedback training_ has [been shown][doi] to be [beneficial][wp] to ameliorate stress.
+ * [nfreear.github.io/breath][breath]
+
+_Resonant breathing biofeedback training_ has [been shown][doi] to be
+[beneficial][wp] to ameliorate stress.
 
 Currently implemented using [SVG + SMIL animation][smil].
 
@@ -17,7 +20,7 @@ Currently implemented using [SVG + SMIL animation][smil].
  * Firefox :~ "_Unexpected value breath-in-anim.end + 1s parsing begin attribute._"
 
 ---
-License: [GPL][]
+License: [GPL][].
 
 [wp]: https://en.wikipedia.org/wiki/Biofeedback#Stress_reduction
   "Biofeedback on Wikipedia."
@@ -37,6 +40,8 @@ License: [GPL][]
 [anim-ball]: https://commons.wikimedia.org/wiki/File:Soccer_ball_animated.svg
 [color]: https://www.rapidtables.com/web/color/color-wheel.html
 [gist]: https://gist.github.com/nfreear/c8666ec92360d09c4f6d559a4e4d55ec
+  "Gist: nfreear / breathing-animation.web-app.svg"
 [gpl]: https://gnu.org/licenses/gpl-3.0.en.html "GNU General Public License version 3+"
 [gh-badge]: https://github.com/nfreear/breath/workflows/Node%20CI/badge.svg
 [gh-link]: https://github.com/nfreear/breath/actions "Test status"
+[app]: https://nfreear.github.io/breath/
