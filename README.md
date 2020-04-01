@@ -5,7 +5,7 @@
 
 A Web App to help you focus on and calm your breathing,
 
- * [nfreear.github.io/breath][breath]
+ * [nfreear.github.io/breath][app]
 
 _Resonant breathing biofeedback training_ has [been shown][doi] to be
 [beneficial][wp] to ameliorate stress.

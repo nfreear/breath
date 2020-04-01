@@ -1,6 +1,14 @@
 
+:root {
+  --dark-teal: #004050;
+}
+
 html,
 body {
+  /* https://cssgradient.io/ */
+  background: rgb(0, 32, 48);
+  background: linear-gradient(180deg, rgba(0,32,48,1) 0%, rgba(0,64,80,1) 95%, rgba(0,64,80,1) 99%);
+  color: #fff;
   font: 1.2rem sans-serif;
   margin: 0;
   height: 100%;
@@ -8,7 +16,7 @@ body {
 }
 
 a#fork-me {
-  border-bottom: 2px dotted transparent;
+  border-bottom: 3px dotted transparent;
   bottom: .6rem;
   color: #ccc;
   letter-spacing: .1rem;
@@ -23,7 +31,6 @@ a#fork-me:hover {
   background: #003040;
   border-color: #999;
   color: #eee;
-  -X-opacity: .7;
   transition: all 3s;
 }
 
@@ -51,9 +58,8 @@ body > svg {
 }
 
 .Dark-Teal {
-  background-color: #005060;
-  color: #fff;
-  fill: #005060;
+  background-color: var(--dark-teal);
+  fill: var(--dark-teal);
 }
 
 .Off-White {
@@ -66,13 +72,4 @@ body > svg {
 
 [ role = button ] {
   cursor: pointer;
-}
-
-a > text {
-  fill: #FFF;
-  font: .9rem sans-serif;
-}
-
-a:hover > text {
-  text-decoration: underline;
 }
