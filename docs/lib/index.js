@@ -31,6 +31,8 @@ ga('send', 'pageview');
       $BREATH_IN.setAttribute('begin', 'click');
       // $BREATH_OUT.setAttribute('begin', '');
     }
+
+    $PAUSE_BTN.style.display = 'block';
   });
 });
 

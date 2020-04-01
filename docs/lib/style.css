@@ -11,7 +11,7 @@ body {
   background: rgb(0, 32, 48);
   background: linear-gradient(180deg, rgba(0,32,48,1) 0%, rgba(0,64,80,1) 95%, rgba(0,64,80,1) 99%);
   color: #fff;
-  font: 1.2rem sans-serif;
+  font: 1rem sans-serif;
   margin: 0;
   height: 100%;
   width: 100%;
@@ -31,16 +31,16 @@ a:hover {
 */
 a#pause-btn {
   bottom: 1.2rem;
-  display: block;
+  display: none;
   left: 1.2rem;
   position: absolute;
-  height: 2.3rem;
+  height: 2rem;
   width: 1rem;
   border-style: solid;
   -X-border-width: 1rem;
   border-color: var(--mid-grey);
   border-style: double;
-  border-width: 0 0 0 1.9rem;
+  border-width: 0 0 0 1.6rem;
 }
 
 a#pause-btn:focus,
@@ -50,11 +50,11 @@ a#pause-btn:hover {
 
 a#fork-me {
   border-bottom: 3px dotted transparent;
-  bottom: .6rem;
-  letter-spacing: .1rem;
-  padding: 1rem;
+  bottom: .5rem;
+  letter-spacing: .05rem;
+  padding: .8rem;
   position: absolute;
-  right: .6rem;
+  right: .5rem;
   text-decoration: none;
 }
 
