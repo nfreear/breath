@@ -12,7 +12,13 @@ _Resonant breathing biofeedback training_ has [been shown][doi] to be
 
 [![Breath Web App][icon]][app]
 
-Currently implemented using [SVG + SMIL animation][smil].
+## 1.0.0-beta ##
+
+New version animated using [SVG + CSS keyframes][keyframe].
+
+## 0.8.0-beta ##
+
+Legacy version animated using [SVG + SMIL][smil].
 
  * Gist: [original SVG][gist]
 
@@ -20,8 +26,9 @@ Currently implemented using [SVG + SMIL animation][smil].
 
  * Chrome  :~ OK!
  * Samsung :~ OK!
- * Firefox :~ "_Unexpected value breath-in-anim.end + 1s parsing begin attribute._"
- * Safari :~ _NO_
+ * Firefox :~ OK!
+ * Safari  :~ OK!
+ * _Edge :~ ??_
 
 ---
 License: [GPL][].
@@ -40,6 +47,8 @@ License: [GPL][].
   "Breathing App Quick Start, 2017, on YouTube."
 [smil]: https://css-tricks.com/guide-svg-animations-smil/
   "A Guide to SVG Animations (SMIL), by Sara Soueidan, 29-Aug-2018."
+[keyframe]: https://css-tricks.com/snippets/css/keyframe-animation-syntax/
+  "Keyframe Animation Syntax, by Chris Coyier, 19-Sep-2016."
 [ball]: https://en.wikipedia.org/wiki/File:Racquetball_ball.svg
 [anim-ball]: https://commons.wikimedia.org/wiki/File:Soccer_ball_animated.svg
 [color]: https://www.rapidtables.com/web/color/color-wheel.html

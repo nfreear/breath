@@ -29,7 +29,7 @@ a:hover {
 
 /* https://css-tricks.com/making-pure-css-playpause-button/
 */
-a#pause-btn {
+#pause-btn {
   bottom: 1.2rem;
   display: none;
   left: 1.2rem;
@@ -43,8 +43,12 @@ a#pause-btn {
   border-width: 0 0 0 1.6rem;
 }
 
-a#pause-btn:focus,
-a#pause-btn:hover {
+.playing #pause-btn {
+  display: block;
+}
+
+#pause-btn:focus,
+#pause-btn:hover {
   border-color: #eee;
 }
 
@@ -102,4 +106,25 @@ body > svg {
 
 [ role = button ] {
   cursor: pointer;
+}
+
+/* Animation.
+*/
+
+@keyframes breath-in-out {
+  0%   { r: 6%;  }
+  45%  { r: 32%; }
+  50%  { r: 32%; }
+  95%  { r: 6%;  }
+  100% { r: 6%;  }
+}
+
+.playing #breath {
+   animation-name: breath-in-out;
+   animation-duration: 6s; /* or: Xms */
+   animation-iteration-count: infinite;
+   animation-direction: alternate; /* or: normal */
+   animation-timing-function: ease-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+   animation-fill-mode: forwards; /* or: backwards, both, none */
+   animation-delay: 300ms; /* or: Xms */
 }

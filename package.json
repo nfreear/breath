@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "breath-web-app",
-  "version": "0.8.0-beta",
+  "version": "1.0.0-beta",
   "description": "A Web App to help you focus on and calm your breathing.",
   "keywords": [ "breathing", "web-app", "svg-animation", "smil" ],
   "license": "GPL-3.0+",

@@ -12,36 +12,37 @@
 const ga = window.ga;
 const NAV = window.navigator;
 const PATH = window.location.pathname;
+const $HTML = document.querySelector('html');
 const $PAUSE_BTN = document.querySelector('#pause-btn');
 const $BREATH = document.querySelector('#breath');
-const $BREATH_IN = document.querySelector('#breath-in-anim');
+// const $BREATH_IN = document.querySelector('#breath-in-anim');
 // const $BREATH_OUT = document.querySelector('#breath-out-anim');
 
 ga('create', 'UA-8330079-9', 'auto');
 ga('send', 'pageview');
 
-['click'/*, 'keypress' */].map(evName => {
-  $BREATH.addEventListener(evName, ev => {
-    console.warn('Breath App: click to breath!', ev);
+let isPlaying = false;
 
-    if ($BREATH_IN.getAttribute('begin') === 'click') {
-      $BREATH_IN.setAttribute('begin', 'breath-out-anim.end + 1s');
-      // $BREATH_OUT.setAttribute('begin', 'breath-in-anim.end + 1s');
-    } else {
-      $BREATH_IN.setAttribute('begin', 'click');
-      // $BREATH_OUT.setAttribute('begin', '');
-    }
-
-    $PAUSE_BTN.style.display = 'block';
-  });
+['click', 'keypress'].map(evName => {
+  $BREATH.addEventListener(evName, ev => togglePlayPause(ev));
 });
 
-$PAUSE_BTN.addEventListener('click', ev => {
+$PAUSE_BTN.addEventListener('click', ev => togglePlayPause(ev));
+
+function togglePlayPause (ev) {
   ev.preventDefault();
-  console.warn('Breath App: pause / reload', ev);
 
-  window.location.reload(false);
-});
+  console.warn('Breath App: click to breath!', ev);
+
+  $HTML.classList.remove(isPlaying ? 'playing' : 'paused');
+  $HTML.classList.add(isPlaying ? 'paused' : 'playing');
+
+  window.setTimeout(() => {
+    $BREATH.innerHTML = `<title>&#10; ${isPlaying ? 'PLAY' : 'PAUSE'} &#10;</title>`;
+
+    isPlaying = !isPlaying;
+  }, 50);
+}
 
 /**
 * @see https://developers.google.com/web/fundamentals/primers/service-workers/registration
