@@ -10,6 +10,8 @@ A Web App to help you focus on and calm your breathing,
 _Resonant breathing biofeedback training_ has [been shown][doi] to be
 [beneficial][wp] to ameliorate stress.
 
+[![Breath Web App][icon]][app]
+
 Currently implemented using [SVG + SMIL animation][smil].
 
  * Gist: [original SVG][gist]
@@ -17,7 +19,9 @@ Currently implemented using [SVG + SMIL animation][smil].
 ## Browser support ?
 
  * Chrome  :~ OK!
+ * Samsung :~ OK!
  * Firefox :~ "_Unexpected value breath-in-anim.end + 1s parsing begin attribute._"
+ * Safari :~ _NO_
 
 ---
 License: [GPL][].
@@ -45,3 +49,4 @@ License: [GPL][].
 [gh-badge]: https://github.com/nfreear/breath/workflows/Node%20CI/badge.svg
 [gh-link]: https://github.com/nfreear/breath/actions "Test status"
 [app]: https://nfreear.github.io/breath/
+[icon]: docs/lib/icon.svg
