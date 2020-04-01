@@ -1,3 +1,7 @@
+/**
+ *
+ * @copyright © Nick Freear, 01-April-2020 | License: GPL-3.0+.
+ */
 
 const NAV = window.navigator;
 const PATH = window.location.pathname;
