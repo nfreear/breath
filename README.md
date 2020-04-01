@@ -3,13 +3,13 @@
 
 # Breath #
 
-A Web App to help you concentrate on and calm your breathing.
+A Web App to help you focus on and calm your breathing.
 
 _Resonant breathing biofeedback training_ has [been shown][doi] to be [beneficial][wp] to ameliorate stress.
 
 Currently implemented using [SVG + SMIL animation][smil].
 
- * [Original gist][gist]
+ * Gist: [original SVG][gist]
 
 ## Browser support ?
 
@@ -20,6 +20,7 @@ Currently implemented using [SVG + SMIL animation][smil].
 License: [GPL][]
 
 [wp]: https://en.wikipedia.org/wiki/Biofeedback#Stress_reduction
+  "Biofeedback on Wikipedia."
 [doi]: https://doi.org/10.1080%2F10803548.2012.11076959
 "A.P. Sutarto, M.N.A Wahab & N.M. Zin (2012) Resonant Breathing Biofeedback Training for Stress Reduction Among Manufacturing Operators, Internat. J. of Occupational Safety and Ergonomics, 18:4, 549-561, DOI: 10.1080/10803548.2012.11076959"
 [eddie]: https://eddiestern.com/the-breathing-app/
@@ -31,6 +32,7 @@ License: [GPL][]
 [video]: https://youtu.be/xXpsoGHnEiU?list=UUNMy2KojFn0jMbxbHZVppGw&index=4#
   "Breathing App Quick Start, 2017, on YouTube."
 [smil]: https://css-tricks.com/guide-svg-animations-smil/
+  "A Guide to SVG Animations (SMIL), by Sara Soueidan, 29-Aug-2018."
 [ball]: https://en.wikipedia.org/wiki/File:Racquetball_ball.svg
 [anim-ball]: https://commons.wikimedia.org/wiki/File:Soccer_ball_animated.svg
 [color]: https://www.rapidtables.com/web/color/color-wheel.html

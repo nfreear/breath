@@ -3,11 +3,22 @@
  * @copyright © Nick Freear, 01-April-2020 | License: GPL-3.0+.
  */
 
+/* eslint-disable */
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+/* eslint-enable */
+
+const ga = window.ga;
 const NAV = window.navigator;
 const PATH = window.location.pathname;
 const $BREATH = document.querySelector('#breath');
 const $BREATH_IN = document.querySelector('#breath-in-anim');
-const $BREATH_OUT = document.querySelector('#breath-out-anim');
+// const $BREATH_OUT = document.querySelector('#breath-out-anim');
+
+ga('create', 'UA-8330079-9', 'auto');
+ga('send', 'pageview');
 
 ['click'/*, 'keypress' */].map(evName => {
   $BREATH.addEventListener(evName, ev => {
@@ -15,10 +26,10 @@ const $BREATH_OUT = document.querySelector('#breath-out-anim');
 
     if ($BREATH_IN.getAttribute('begin') === 'click') {
       $BREATH_IN.setAttribute('begin', 'breath-out-anim.end + 1s');
-      $BREATH_OUT.setAttribute('begin', 'breath-in-anim.end + 1s');
+      // $BREATH_OUT.setAttribute('begin', 'breath-in-anim.end + 1s');
     } else {
       $BREATH_IN.setAttribute('begin', 'click');
-      $BREATH_OUT.setAttribute('begin', '');
+      // $BREATH_OUT.setAttribute('begin', '');
     }
   });
 });
