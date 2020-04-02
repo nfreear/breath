@@ -5,16 +5,16 @@
 
 A Web App to help you focus on and calm your breathing,
 
- * Try me! [__nfreear.github.io/breath__][app]
+Try me! [__nfreear.github.io/breath__][app]
+
+[![Breath Web App][icon]][app]
 
 _Resonant breathing biofeedback training_ has [been shown][doi] to be
 [beneficial][wp] to relieve stress.
 
-[![Breath Web App][icon]][app]
+## 0.9.0-beta ##
 
-## 1.0.0-beta ##
-
-New version animated using [SVG + CSS keyframes][keyframe].
+New version animated using [SVG + CSS keyframes][keyframe] ([Anim][cani-css-ani]).
 
 ## 0.8.0-beta ##
 
@@ -49,6 +49,8 @@ License: [GPL][].
   "A Guide to SVG Animations (SMIL), by Sara Soueidan, 29-Aug-2018."
 [keyframe]: https://css-tricks.com/snippets/css/keyframe-animation-syntax/
   "Keyframe Animation Syntax, by Chris Coyier, 19-Sep-2016."
+[cani-css-anim]:https://caniuse.com/#feat=css-animation
+  "Can I use 'CSS Animation' (keyframe)?"
 [ball]: https://en.wikipedia.org/wiki/File:Racquetball_ball.svg
 [anim-ball]: https://commons.wikimedia.org/wiki/File:Soccer_ball_animated.svg
 [color]: https://www.rapidtables.com/web/color/color-wheel.html
