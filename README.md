@@ -1,11 +1,12 @@
 
 [![Node CI ~ test status][gh-badge]][gh-link]
+[![Lighthouse audit][lh-badge]][lh-link]
 
 # Breath #
 
-A Web App to help you focus on and calm your breathing,
+A Web App to help you focus on and calm your breathing.
 
-Try me! [__nfreear.github.io/breath__][app]
+_Try me!_ [__nfreear.github.io/breath__][app]
 
 [![Breath Web App][icon]][app]
 
@@ -14,7 +15,7 @@ _Resonant breathing biofeedback training_ has [been shown][doi] to be
 
 ## 0.9.0-beta ##
 
-New version animated using [SVG + CSS keyframes][keyframe] ([Anim][cani-css-ani]).
+New version animated using [SVG + CSS keyframes][keyframe] ([Anim][cani-css-anim]).
 
 ## 0.8.0-beta ##
 
@@ -51,12 +52,17 @@ License: [GPL][].
   "Keyframe Animation Syntax, by Chris Coyier, 19-Sep-2016."
 [cani-css-anim]:https://caniuse.com/#feat=css-animation
   "Can I use 'CSS Animation' (keyframe)?"
+[pwa]: https://en.wikipedia.org/wiki/Progressive_web_application#Service_workers
 [ball]: https://en.wikipedia.org/wiki/File:Racquetball_ball.svg
 [anim-ball]: https://commons.wikimedia.org/wiki/File:Soccer_ball_animated.svg
 [color]: https://www.rapidtables.com/web/color/color-wheel.html
 [gist]: https://gist.github.com/nfreear/c8666ec92360d09c4f6d559a4e4d55ec
   "Gist: nfreear / breathing-animation.web-app.svg"
-[gpl]: https://gnu.org/licenses/gpl-3.0.en.html "GNU General Public License version 3+"
+[gpl]: https://gnu.org/licenses/gpl-3.0.en.html
+  "© Nick Freear, 01-Apr-2020 | GNU General Public License version 3+"
+[lh-badge]: https://img.shields.io/badge/Lighthouse%20audit-97%25-brightgreen
+  "Lighthouse audit report — 100 | 96 | 92 | 100"
+[lh-link]: https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A//nfreear.github.io/breath/
 [gh-badge]: https://github.com/nfreear/breath/workflows/Node%20CI/badge.svg
 [gh-link]: https://github.com/nfreear/breath/actions "Node CI — Test status"
 [app]: https://nfreear.github.io/breath/

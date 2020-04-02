@@ -1,4 +1,5 @@
 /**
+ * Breath Web App | © Nick Freear | License: GPL-3.0+.
  *
  * @see https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker
  */

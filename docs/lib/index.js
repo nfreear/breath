@@ -32,8 +32,8 @@ function togglePlayPause (ev) {
 
   console.warn(`Breath App: ${isPlaying ? 'PAUSE' : 'PLAY'}`, ev);
 
-  $HTML.classList.remove(isPlaying ? 'playing' : 'paused');
-  $HTML.classList.add(isPlaying ? 'paused' : 'playing');
+  $HTML.classList.remove(isPlaying ? 'is-playing' : 'is-paused');
+  $HTML.classList.add(isPlaying ? 'is-paused' : 'is-playing');
 
   window.setTimeout(() => {
     $BREATH.innerHTML = `<title>&#10; ${isPlaying ? 'PLAY' : 'PAUSE'} &#10;</title>`;

@@ -1,26 +1,46 @@
+/*!
+  Breath Web App | © Nick Freear | License: GPL-3.0+.
+*/
 
 :root {
-  --dark-teal: #004050;
+  --teal: #008080;
+  --dark-teal: rgb(0, 32, 48); /* Hex: #004050; */
+  --dark-teal-a: rgba(0,64,80,1);
+  --darker-teal: rgba(0,32,48,1);
   --off-white: #DDD;
+  --silver: #C0C0C0;
   --mid-grey: #999;
+  --zoom: 1;
 }
 
-html,
-body {
-  /* https://cssgradient.io/ */
-  background: rgb(0, 32, 48);
-  background: linear-gradient(180deg, rgba(0,32,48,1) 0%, rgba(0,64,80,1) 95%, rgba(0,64,80,1) 99%);
-  color: #fff;
-  font: 1rem sans-serif;
-  margin: 0;
+/* Counter-intuitively, larger fonts on big-screens! (iPad+) */
+@media (min-width: 767px) {
+  :root {
+    --zoom: 1.5;
+  }
+}
+
+html, body, svg, main {
   height: 100%;
   width: 100%;
 }
 
+body {
+  /* https://cssgradient.io/ */
+  background: var(--dark-teal);
+  background: linear-gradient(180deg, var(--darker-teal) 0%, var(--dark-teal-a) 95%, var(--dark-teal-a) 99%);
+  color: #fff;
+  font: calc(var(--zoom) * 1.1rem) sans-serif;
+  margin: 0;
+  transition: all 1s;
+}
+
+button,
 a {
   color: var(--off-white);
 }
 
+button:hover,
 a:focus,
 a:hover {
   color: #eee;
@@ -30,20 +50,21 @@ a:hover {
 /* https://css-tricks.com/making-pure-css-playpause-button/
 */
 #pause-btn {
+  background: transparent;
   bottom: 1.2rem;
   display: none;
   left: 1.2rem;
   position: absolute;
-  height: 2rem;
-  width: 1rem;
+  height: calc(var(--zoom) * 2rem);
+  width: .4rem;
   border-style: solid;
   -X-border-width: 1rem;
   border-color: var(--mid-grey);
   border-style: double;
-  border-width: 0 0 0 1.6rem;
+  border-width: 0 0 0 calc(var(--zoom) * 1.6rem);
 }
 
-.playing #pause-btn {
+.is-playing #pause-btn {
   display: block;
 }
 
@@ -82,26 +103,8 @@ a#fork-me:hover {
 /* SVG styles.
 */
 
-body > svg {
-  height: 100%;
-  width: 100%;
-}
-
-.Teal {
-  fill: #008080;
-}
-
-.Dark-Teal {
-  background-color: var(--dark-teal);
-  fill: var(--dark-teal);
-}
-
 .Off-White {
   fill: var(--off-white);
-}
-
-.Silver {
-  fill: #C0C0C0;
 }
 
 [ role = button ] {
@@ -111,18 +114,18 @@ body > svg {
 /* Animation.
 */
 
-#breath { r: 6%; }
+#breath { r: 5%; animation: none; }
 
-@keyframes breath-in-out {
-  0%   { r: 6%;  }
-  43%  { r: 32%; }
-  50%  { r: 32%; }
-  93%  { r: 6%;  }
-  100% { r: 6%;  }
+@keyframes Breath-In-Out {
+  0%   { r: 5%;  }
+  43%  { r: 31%; }
+  50%  { r: 31%; }
+  93%  { r: 5%;  }
+  100% { r: 5%;  }
 }
 
-.playing #breath {
-   animation-name: breath-in-out;
+.is-playing #breath {
+   animation-name: Breath-In-Out;
    animation-duration: 12s; /* or: Xms */
    animation-iteration-count: infinite;
    animation-direction: alternate; /* or: normal */
