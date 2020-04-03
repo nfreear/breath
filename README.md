@@ -5,6 +5,7 @@
 # Breath #
 
 A Web App to help you focus on and calm your breathing.
+__Currently in 'Beta'.__
 
 _Try me!_ [__nfreear.github.io/breath__][app]
 
@@ -25,11 +26,14 @@ Legacy version animated using [SVG + SMIL][smil].
 
 ## Browser support?
 
- * Chrome  :~ OK!
- * Samsung :~ OK!
- * Firefox :~ OK!
- * Safari  :~ OK!
- * _Edge :~ ??_
+This is the current status, based on what I've managed to test so far!
+
+ * ✅ _OK_ — Chrome _(desktop, Android)_,
+ * ✅ _OK_ — Samsung _(Android)_,
+ * ✅ _OK_ — Firefox _(desktop)_,
+ * ✅ _OK_ — Safari _(Mac OS, iOS, iPhone)_,
+ * ❌ _bug_ — MS Edge — _I'm investigating_,
+ * ✖️ _NO_ — MS Internet Explorer — _not supported_!
 
 ---
 License: [GPL][].

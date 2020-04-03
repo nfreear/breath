@@ -56,12 +56,14 @@ a:hover {
   left: 1.2rem;
   position: absolute;
   height: calc(var(--zoom) * 2rem);
-  width: .4rem;
+  width: 1rem;
   border-style: solid;
-  -X-border-width: 1rem;
+  border-width: 1rem;
   border-color: var(--mid-grey);
   border-style: double;
   border-width: 0 0 0 calc(var(--zoom) * 1.6rem);
+
+  box-sizing: border-box;
 }
 
 .is-playing #pause-btn {
@@ -76,7 +78,7 @@ a:hover {
 a#fork-me {
   border-bottom: 3px dotted transparent;
   bottom: .5rem;
-  letter-spacing: .05rem;
+  letter-spacing: .1rem;
   padding: .8rem;
   position: absolute;
   right: .5rem;
@@ -98,6 +100,11 @@ a#fork-me:hover {
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
+}
+
+a .beta {
+  color: var(--mid-grey);
+  font-style: italic;
 }
 
 /* SVG styles.
