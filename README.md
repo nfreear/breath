@@ -1,10 +1,12 @@
 
 [![Node CI ~ test status][gh-badge]][gh-link]
 [![Lighthouse audit][lh-badge]][lh-link]
+[![License: GPL][gpl-badge]][gpl]
 
-# Breath #
 
 [![Breath Web App][icon]][app]
+
+# Breath #
 
 A Web App to help you focus on and calm your breathing.
 __Currently in 'Beta'.__
@@ -15,6 +17,7 @@ _Try me!_ [__nfreear.github.io/breath__][app]
 _Resonant breathing biofeedback training_ has [been shown][doi] to be
 [beneficial][wp] to relieve stress.
 
+---
 ## 0.9.0-beta ##
 
 New version animated using [SVG + CSS keyframes][keyframe] ([Anim][cani-css-anim]).
@@ -25,21 +28,25 @@ Legacy version animated using [SVG + SMIL][smil].
 
  * Gist: [original SVG][gist]
 
+---
 ## Browser support?
+
+_The intention is to support the App on the latest version of the
+ever-green browsers listed below, except for Internet Explorer_.
 
 This is the current status, based on what I've managed to test so far!
 
  * ✅ _OK_ — Chrome _(desktop, Android)_,
  * ✅ _OK_ — Samsung _(Android)_,
  * ✅ _OK_ — Firefox _(desktop)_,
- * ✅ _OK_ — Safari _(Mac OS, iOS, iPhone)_,
+ * ✅ _OK_ — Safari _(Mac OS, iOS: iPhone)_,
  * ❌ _bug_ — MS Edge — _I'm investigating_,
  * ✖️ _NO_ — MS Internet Explorer — _not supported_!
 
 ---
 ## License
 
- * License: [GNU General Public License 3.0][gpl].
+ * License: [GNU General Public License __(GPL-3.0)__][gpl].
 
 [wp]: https://en.wikipedia.org/wiki/Biofeedback#Stress_reduction
   "Biofeedback on Wikipedia."
@@ -65,6 +72,7 @@ This is the current status, based on what I've managed to test so far!
 [color]: https://www.rapidtables.com/web/color/color-wheel.html
 [gist]: https://gist.github.com/nfreear/c8666ec92360d09c4f6d559a4e4d55ec
   "Gist: nfreear / breathing-animation.web-app.svg"
+[gpl-badge]: https://img.shields.io/badge/license-GPL-red
 [gpl]: https://gnu.org/licenses/gpl-3.0.en.html
   "© Nick Freear, 01-Apr-2020 | GNU General Public License version 3.0+"
 [lh-badge]: https://img.shields.io/badge/Lighthouse%20audit-97%25-brightgreen
