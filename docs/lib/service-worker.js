@@ -18,6 +18,8 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll(
         [
+          `${PATH}/app-about.html`,
+          `${PATH}/app-about.js`,
           `${PATH}/icon.svg`,
           `${PATH}/index.js`,
           `${PATH}/style.css`

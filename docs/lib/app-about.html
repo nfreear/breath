@@ -1,0 +1,95 @@
+<!--doctype html-->
+
+<style>
+.app-about--close .app-about {
+  height: 1px;
+  min-height: 0;
+}
+
+.app-about--end .app-about {
+  display: none;
+}
+
+.app-about {
+  background: #fff;
+  border-top: 2px solid black;
+  color: #333;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  position: absolute;
+
+  overflow: hidden;
+  min-height: 8rem;
+  transition: all 1s;
+}
+
+.app-about a {
+  color: navy;
+}
+
+.app-about h1,
+.app-about p {
+  font-weight: normal;
+  margin: 1rem 0;
+}
+
+.app-about sup {
+  color: gray;
+  font-style: italic;
+}
+
+.app-about > div {
+  max-width: 38rem;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+.app-about .close-btn {
+  background: #ccc;
+  border: 2px solid #888;
+  border-radius: 50%;
+  color: #222;
+  cursor: pointer;
+  float: right;
+  font-size: 2.5rem;
+  line-height: .8;
+  margin: 1rem;
+  height: 3.7rem;
+  width: 3.7rem;
+}
+
+.app-about .close-btn:hover,
+.app-about .close-btn:focus {
+  background: #fff;
+}
+</style>
+
+
+<aside class="app-about">
+
+  <button
+    class="close-btn"
+    type="button"
+    title="&#10; CLOSE &#10;"
+    onclick="appAboutClose(event);"
+    >&times;</button>
+
+  <div>
+    <h1> Breath Web App <sup>beta</sup> </h1>
+
+    <p>
+      <a href="https://github.com/nfreear/breath#readme"
+         target="_blank" rel="noopener"
+         title="&#10; Opens in a new window &#10;">Find out more</a>
+      |
+      &copy; 2020 Nick Freear
+      |
+      License:
+      <a href="https://github.com/nfreear/breath#license"
+         target="_blank" rel="noopener"
+         title="&#10; Opens in a new window &#10;">GPL</a> </p>
+  </div>
+
+</aside>

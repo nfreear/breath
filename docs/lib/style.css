@@ -107,6 +107,15 @@ a .beta {
   font-style: italic;
 }
 
+.app-about {
+  transition: all 1s;
+}
+
+.hide-app-about .app-about {
+  height: 1px;
+  min-height: 0;
+}
+
 /* SVG styles.
 */
 

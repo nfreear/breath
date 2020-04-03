@@ -2,6 +2,8 @@
   Breath Web App | © Nick Freear | License: GPL-3.0+.
 */
 
+import * as APP_ABOUT from './app-about.js';
+
 /* eslint-disable */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -30,7 +32,7 @@ let isPlaying = false;
 function togglePlayPause (ev) {
   ev.preventDefault();
 
-  console.warn(`Breath App: ${isPlaying ? 'PAUSE' : 'PLAY'}`, ev);
+  console.warn(`Breath App: ${isPlaying ? 'PAUSE' : 'PLAY'}`, ev, APP_ABOUT);
 
   $HTML.classList.remove(isPlaying ? 'is-playing' : 'is-paused');
   $HTML.classList.add(isPlaying ? 'is-paused' : 'is-playing');
