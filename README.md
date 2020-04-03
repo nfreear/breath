@@ -4,12 +4,13 @@
 
 # Breath #
 
+[![Breath Web App][icon]][app]
+
 A Web App to help you focus on and calm your breathing.
 __Currently in 'Beta'.__
 
 _Try me!_ [__nfreear.github.io/breath__][app]
 
-[![Breath Web App][icon]][app]
 
 _Resonant breathing biofeedback training_ has [been shown][doi] to be
 [beneficial][wp] to relieve stress.
@@ -36,7 +37,9 @@ This is the current status, based on what I've managed to test so far!
  * ✖️ _NO_ — MS Internet Explorer — _not supported_!
 
 ---
-License: [GPL][].
+## License
+
+ * License: [GNU General Public License 3.0][gpl].
 
 [wp]: https://en.wikipedia.org/wiki/Biofeedback#Stress_reduction
   "Biofeedback on Wikipedia."
@@ -63,11 +66,11 @@ License: [GPL][].
 [gist]: https://gist.github.com/nfreear/c8666ec92360d09c4f6d559a4e4d55ec
   "Gist: nfreear / breathing-animation.web-app.svg"
 [gpl]: https://gnu.org/licenses/gpl-3.0.en.html
-  "© Nick Freear, 01-Apr-2020 | GNU General Public License version 3+"
+  "© Nick Freear, 01-Apr-2020 | GNU General Public License version 3.0+"
 [lh-badge]: https://img.shields.io/badge/Lighthouse%20audit-97%25-brightgreen
   "Lighthouse audit report — 100 | 96 | 92 | 100"
 [lh-link]: https://lighthouse-dot-webdotdevsite.appspot.com//lh/html?url=https%3A//nfreear.github.io/breath/
 [gh-badge]: https://github.com/nfreear/breath/workflows/Node%20CI/badge.svg
 [gh-link]: https://github.com/nfreear/breath/actions "Node CI — Test status"
-[app]: https://nfreear.github.io/breath/
+[app]: https://nfreear.github.io/breath/ "Try the 'Breath' Web App (beta)"
 [icon]: docs/lib/icon.svg

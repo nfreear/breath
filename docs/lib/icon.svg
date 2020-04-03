@@ -2,12 +2,25 @@
 <!DOCTYPE svg>
 <svg viewBox="0 0 192 192" height="192.0" width="192.0" xmlns="http://www.w3.org/2000/svg" xml:lang="en">
 
-  <title> Breath Web App — icon </title>
+  <title> Breath Web App (beta) — icon </title>
 
-  <desc> © Nick Freear. </desc>
+  <desc> © NDF | https://nfreear.github.io/breath/ </desc>
 
-  <rect x="0" y="0" width="100%" height="100%" rx="10%" fill="#004050" />
+  <defs>
+    <style>
+      rect.bg,
+      .name { fill: #004050; }
+      text.name { font: 205% Arial,sans-serif; font-weight: 400; }
+      text > .beta { font-size: 70%; font-style: italic; font-weight: 300; }
+    </style>
+  </defs>
 
-  <circle cx="50%" cy="50%" r="28%" fill="#E8E8E8" />
+  <rect class="bg" x="0" y="0" width="100%" height="100%" rx="10%" />
+
+  <circle cx="50%" cy="50%" r="42%" fill="#E8E8E8" />
+
+  <text class="name" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+    >Breath <tspan class="beta">beta</tspan>
+  </text>
 
 </svg>
