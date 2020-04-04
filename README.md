@@ -53,7 +53,7 @@ This is the current status, based on what I've managed to test so far!
 [sutarto-2012]: https://doi.org/10.1080%2F10803548.2012.11076959
 "A.P. Sutarto, M.N.A Wahab & N.M. Zin (2012) Resonant Breathing Biofeedback Training for Stress Reduction Among Manufacturing Operators, Internat. J. of Occupational Safety and Ergonomics, 18:4, 549-561, DOI: 10.1080/10803548.2012.11076959; Retrieved 04-April-2020"
 [moss-2004]: https://bfe.org/articles/issue1_final.pdf
-"Moss D. Heart rate variability (HRV) biofeedback. Psychophysiology Today. 2004;(1):4–11. Retrieved 04-April-2020.""
+"Moss D. Heart rate variability (HRV) biofeedback. Psychophysiology Today. 2004;(1):4–11. Retrieved 04-April-2020."
 [eddie]: https://eddiestern.com/the-breathing-app/
 [android]: https://play.google.com/store/apps/details?id=org.ayny.breathingapp#
   "The Breathing App, on Google Play for Android."

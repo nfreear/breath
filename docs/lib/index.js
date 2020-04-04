@@ -21,6 +21,8 @@ const $BREATH = document.querySelector('#breath');
 ga('create', 'UA-8330079-9', 'auto');
 ga('send', 'pageview');
 
+urlSetAnimationDuration();
+
 let isPlaying = false;
 
 ['click', 'keypress'].map(evName => {
@@ -28,6 +30,23 @@ let isPlaying = false;
 
   $PAUSE_BTN.addEventListener(evName, ev => togglePlayPause(ev));
 });
+
+/**
+ * A duration of 10 seconds equates to 6 breaths per minute ;).
+ *   12s ~~ 5 breaths/min.
+ *   10s ~~ 6 bpm.
+ *    8s ~~ 7.5 bpm.
+ *
+ *  @see [moss-2004] & [sutarto-2012] in the README.
+ */
+function urlSetAnimationDuration () {
+  const M_DUR = window.location.search.match(/duration=(\d{1,2}(\.\d)?s)/);
+  const DURATION = M_DUR ? M_DUR[1] : '10s';
+
+  console.warn('animation-duration:', DURATION);
+
+  $BREATH.style.animationDuration = DURATION;
+}
 
 function togglePlayPause (ev) {
   ev.preventDefault();
