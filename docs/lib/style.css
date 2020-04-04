@@ -36,9 +36,11 @@ body {
   transition: all 1s;
 }
 
+[ role = button ],
 button,
 a {
   color: var(--off-white);
+  cursor: pointer;
 }
 
 button:hover,
@@ -123,10 +125,6 @@ a .beta {
 
 .Off-White {
   fill: var(--off-white);
-}
-
-[ role = button ] {
-  cursor: pointer;
 }
 
 /* End */

@@ -1,22 +1,30 @@
-/* Animation.
+/*!
+  Breath Web App | © Nick Freear | License: GPL-3.0+.
+*/
+
+/* The breathing animation.
 */
 
 #breath { r: 5%; animation: none; }
 
 @keyframes Breath-In-Out {
   0%   { r: 5%;  }
-  43%  { r: 31%; }
-  50%  { r: 31%; }
-  93%  { r: 5%;  }
-  100% { r: 5%;  }
+  40%  { r: 30%; } /* 4s - inhale */
+  50%  { r: 30%; } /* 1s - hold */
+  80%% { r: 5%;  } /* 4s - exhale */
+  100% { r: 5%;  } /* 1s - hold */
 }
 
+/* A duration of 10 seconds equates to 6 breathes per second ;).
+
+   See: [moss-2004] & [sutarto-2012] in the README.
+*/
 .is-playing #breath {
    animation-name: Breath-In-Out;
-   animation-duration: 12s; /* or: Xms */
+   animation-duration: 10s; /* or: Xms */ /* Was: 12s! */
    animation-iteration-count: infinite;
    animation-direction: alternate; /* or: normal */
    animation-timing-function: ease-in-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
    animation-fill-mode: forwards; /* or: backwards, both, none */
-   animation-delay: 200ms; /* or: Xms */
+   animation-delay: 100ms; /* or: Xms */
 }
