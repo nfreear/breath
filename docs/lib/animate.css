@@ -1,0 +1,22 @@
+/* Animation.
+*/
+
+#breath { r: 5%; animation: none; }
+
+@keyframes Breath-In-Out {
+  0%   { r: 5%;  }
+  43%  { r: 31%; }
+  50%  { r: 31%; }
+  93%  { r: 5%;  }
+  100% { r: 5%;  }
+}
+
+.is-playing #breath {
+   animation-name: Breath-In-Out;
+   animation-duration: 12s; /* or: Xms */
+   animation-iteration-count: infinite;
+   animation-direction: alternate; /* or: normal */
+   animation-timing-function: ease-in-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
+   animation-fill-mode: forwards; /* or: backwards, both, none */
+   animation-delay: 200ms; /* or: Xms */
+}
