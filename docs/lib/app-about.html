@@ -30,7 +30,9 @@
 }
 
 .app-about h1 {
+  font-size: calc(var(--zoom) * 1.5rem);
   word-spacing: -.1rem;
+  transition: font-size 1s;
 }
 
 .app-about h1,
@@ -43,6 +45,7 @@
 .app-about sup {
   color: gray;
   font-style: italic;
+  word-spacing: -.3rem;
 }
 
 .app-about > div {
@@ -85,7 +88,7 @@
     >&times;</button>
 
   <div>
-    <h1> Breath Web App<sup>beta</sup> </h1>
+    <h1> Breath Web App<sup> beta</sup> </h1>
 
     <p>
       <a href="https://github.com/nfreear/breath#readme"
