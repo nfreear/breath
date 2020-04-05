@@ -21,6 +21,7 @@ self.addEventListener('install', event => {
           `${PATH}/animate.css`,
           `${PATH}/app-about.html`,
           `${PATH}/app-about.js`,
+          `${PATH}/icon.png`,
           `${PATH}/icon.svg`,
           `${PATH}/index.js`,
           `${PATH}/style.css`
