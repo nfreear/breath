@@ -8,7 +8,7 @@
 
 # Breath #
 
-A Web App to help you focus on and calm your breathing.
+A Web & Mobile App to help you focus on and calm your breathing.
 __Currently in 'Beta'.__
 
 _Try me!_ [__nfreear.github.io/breath__][app]
