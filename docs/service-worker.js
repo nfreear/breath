@@ -6,7 +6,7 @@
 
 /* eslint-env worker */
 
-const PATH = location.pathname.replace(/\/[^/]+$/, ''); // '/docs/lib/service-worker.js'
+const PATH = location.pathname.replace(/\/[^/]+$/, '') + '/lib'; // '/docs/lib/service-worker.js'
 const CACHE_NAME = 'breath-app-cache';
 
 console.warn('Worker: location', PATH, location);
@@ -31,3 +31,8 @@ self.addEventListener('install', event => {
     })
   );
 });
+
+// https://developers.google.com/web/ilt/pwa/lab-caching-files-with-service-worker#3_serve_files_from_the_cache
+self.addEventListener('fetch', () => console.log('fetch')); // >> ??
+
+// End.

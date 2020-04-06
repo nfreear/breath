@@ -4,15 +4,19 @@
 
 import * as APP_ABOUT from './app-about.js';
 
+const NAV = window.navigator;
+
+if (NAV.onLine) {
 /* eslint-disable */
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-/* eslint-enable */
+  /* eslint-enable */
+  console.debug('Breath App: online');
+} else { console.debug('Breath App: offline'); }
 
-const ga = window.ga;
-const NAV = window.navigator;
+const ga = window.ga || (() => {}); // function () {};
 const PATH = window.location.pathname;
 const $HTML = document.querySelector('html');
 const $PAUSE_BTN = document.querySelector('#pause-btn');
@@ -65,11 +69,13 @@ function togglePlayPause (ev) {
 
 /**
 * @see https://developers.google.com/web/fundamentals/primers/service-workers/registration
+* @see https://stackoverflow.com/questions/35780397/understanding-service-worker-scope/48068714#
 */
+console.debug('Path:', PATH);
 
 if ('serviceWorker' in NAV) {
   window.addEventListener('load', () => {
-    NAV.serviceWorker.register(`${PATH}lib/service-worker.js`)
+    NAV.serviceWorker.register('./service-worker.js') // , { scope: `${PATH}` }
       .then(() => console.warn('Breath App: service-worker.js registered OK!'));
   });
 }
