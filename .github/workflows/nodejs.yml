@@ -20,7 +20,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        fetch-depth: 1
+        fetch-depth: 5
+        # Was: fetch-depth: 1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -34,7 +35,8 @@ jobs:
       run: |
         git tag
         git pull --tags
-        git describe --long --tag
+        git tag
+        git describe --long --tag --always
 
   Skip:
     runs-on: ubuntu-latest
