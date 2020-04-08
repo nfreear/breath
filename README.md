@@ -1,8 +1,8 @@
 
 [![Node CI ~ test status][gh-badge]][gh-link]
 [![Lighthouse audit][lh-badge]][lh-link]
+[![Find PWA directory][find-badge]][find-link]
 [![License: GPL][gpl-badge]][gpl]
-
 
 [![Breath Web App][icon]][app]
 
@@ -82,8 +82,8 @@ This is the current status, based on what I've managed to test so far!
 [lh-badge]: docs/lib/badge-lighthouse.svg
   "Lighthouse audit report — 99.2% — (97 | 100 | 100 | 100)"
 [lh-link]: https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https%3A//nfreear.github.io/breath/
-[find-badge]: https://img.shields.io/badge/findPWA-breath-ff69b4
-[find-pwa]: https://findpwa.com/app/breath-web-app "'Breath' on findPWA"
+[find-badge]: docs/lib/badge-findpwa.svg
+[find-link]: https://findpwa.com/app/breath-web-app "'Breath' on findPWA"
 [gh-badge]: https://github.com/nfreear/breath/workflows/Node%20CI/badge.svg
 [gh-link]: https://github.com/nfreear/breath/actions "Node CI — Test status"
 [app]: https://nfreear.github.io/breath/ "Try the 'Breath' Web App (beta)"
