@@ -8,9 +8,8 @@
 
   <defs>
     <style>
-      rect.bg,
-      .name { fill: #004050; }
-      text.name { font: 270% Arial,sans-serif; /* Was: 205% */ font-weight: 400; word-spacing: -4px; }
+      rect.bg, .name { fill: #004050; }
+      .name { font: 270% Arial,sans-serif; font-weight: 400; word-spacing: -4px; }
     </style>
   </defs>
 
@@ -18,8 +17,6 @@
 
   <circle cx="50%" cy="50%" r="38%" fill="#E8E8E8" />
 
-  <text class="name" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" data-X-textLength="80%"
-    >Breath
-  </text>
+  <text class="name" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">Breath</text>
 
 </svg>
