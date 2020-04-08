@@ -46,10 +46,18 @@ let isPlaying = false;
 function urlSetAnimationDuration () {
   const M_DUR = window.location.search.match(/duration=(\d{1,2}(\.\d)?s)/);
   const DURATION = M_DUR ? M_DUR[1] : '10s';
+  const STYLES = filterComputedStyle($BREATH);
 
-  console.warn('animation-duration:', DURATION);
+  console.warn('animation-duration:', DURATION, STYLES);
 
   $BREATH.style.animationDuration = DURATION;
+}
+
+function filterComputedStyle($elem, filterRegex = /^animation-/) {
+  const cssStyleDecl = window.getComputedStyle($elem, null);
+  const styleArray = cssStyleDecl.cssText.split('; ');
+
+  return styleArray.filter(css => filterRegex.test(css));
 }
 
 function togglePlayPause (ev) {
