@@ -53,7 +53,7 @@ function urlSetAnimationDuration () {
   $BREATH.style.animationDuration = DURATION;
 }
 
-function filterComputedStyle($elem, filterRegex = /^animation-/) {
+function filterComputedStyle ($elem, filterRegex = /^animation-/) {
   const cssStyleDecl = window.getComputedStyle($elem, null);
   const styleArray = cssStyleDecl.cssText.split('; ');
 
