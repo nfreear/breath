@@ -19,7 +19,16 @@
 
 /* Hold / pause for 20%.
 */
-@keyframes Breath-In-Out-20pc {
+@keyframes Breath-In-Out-20pc--Symmetric {
+  0%   { r: 5%;  }
+  10%  { r: 5%;  }
+  40%  { r: 30%; } /* 4s - inhale */
+  60%  { r: 30%; } /* 1s - hold */
+  90%  { r: 5%;  } /* 4s - exhale */
+  100% { r: 5%;  } /* 1s - hold */
+}
+
+@keyframes Breath-In-Out--Non-Sym {
   0%   { r: 5%;  }
   30%  { r: 30%; } /* 4s - inhale */
   50%  { r: 30%; } /* 1s - hold */
@@ -27,8 +36,12 @@
   99%  { r: 5%;  } /* 1s - hold */
 }
 
+.bug #breath {
+  animation-name: Breath-In-Out--Non-Sym;
+}
+
 .hold-for-20pc #breath {
-  animation-name: Breath-In-Out-20pc;
+  animation-name: Breath-In-Out-20pc--Symmetric;
 }
 
 .hold-for-10pc #breath {
@@ -47,7 +60,7 @@
    animation-direction: alternate; /* or: normal */
    animation-timing-function: ease-in-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
    animation-fill-mode: forwards; /* or: backwards, both, none */
-   animation-delay: 100ms; /* or: Xms */
+   animation-delay: 10ms; /* or: Xms */
 }
 
 .is-playing #breath {
