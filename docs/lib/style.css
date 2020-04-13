@@ -123,6 +123,10 @@ a .beta {
 /* SVG styles.
 */
 
+svg #breath {
+  fill: var(--silver);
+}
+
 .Off-White {
   fill: var(--off-white);
 }
