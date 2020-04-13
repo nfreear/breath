@@ -3,7 +3,7 @@
   <!--
     Source :~ https://img.shields.io/badge/findPWA-Breath_App-orange
   -->
-  <style> .message { fill: #D34947; } </style>
+  <style> .message { fill: teal; /* Was: #D34947; */ } </style>
 
   <linearGradient id="b" x2="0" y2="100%">
     <stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/>
@@ -12,7 +12,7 @@
     <rect width="126" height="20" rx="3" fill="#fff"/>
   </clipPath>
   <g clip-path="url(#a)">
-    <path fill="#555" d="M0 0h55v20H0z"/>
+    <path fill="#444" d="M0 0h55v20H0z"/>
     <path class="message" d="M55 0h71v20H55z"/>
     <path fill="url(#b)" d="M0 0h126v20H0z"/>
   </g>

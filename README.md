@@ -77,8 +77,8 @@ This is the current status, based on what I've managed to test so far!
 [gist]: https://gist.github.com/nfreear/c8666ec92360d09c4f6d559a4e4d55ec
   "Gist: nfreear / breathing-animation.web-app.svg"
 [gpl-badge]: docs/lib/badge-gpl.svg
-[gpl]: https://gnu.org/licenses/gpl-3.0.en.html
-  "© Nick Freear, 01-Apr-2020 | GNU General Public License version 3.0+"
+[gpl]: https://gnu.org/licenses/gpl-3.0.html#content
+  "© Nick Freear, 01-Apr-2020 | GNU General Public License version | GPL-3.0+"
 [lh-badge]: docs/lib/badge-lighthouse.svg
   "Lighthouse audit report — 99.2% — (97 | 100 | 100 | 100)"
 [lh-link]: https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https%3A//nfreear.github.io/breath/

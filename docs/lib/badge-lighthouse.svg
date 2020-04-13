@@ -3,7 +3,7 @@
   <!--
     Source :~ https://img.shields.io/badge/Lighthouse_audit-99.2%25-brightgreen
   -->
-  <style> .message { fill: #0535C1; /* Was: #4c1 */ } </style>
+  <style> .message { fill: #0a0; /* Was: #0535C1; #4c1; */ } </style>
 
   <linearGradient id="b" x2="0" y2="100%">
     <stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/>
@@ -12,7 +12,7 @@
     <rect width="148" height="20" rx="3" fill="#fff"/>
   </clipPath>
   <g clip-path="url(#a)">
-    <path fill="#555" d="M0 0h101v20H0z"/>
+    <path fill="#444" d="M0 0h101v20H0z"/>
     <path class="message" d="M101 0h47v20H101z"/>
     <path fill="url(#b)" d="M0 0h148v20H0z"/>
   </g>
