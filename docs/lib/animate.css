@@ -22,18 +22,18 @@
 @keyframes Breath-In-Out-20pc--Symmetric {
   0%   { r: 5%;  }
   10%  { r: 5%;  }
-  40%  { r: 30%; } /* 4s - inhale */
-  60%  { r: 30%; } /* 1s - hold */
-  90%  { r: 5%;  } /* 4s - exhale */
-  100% { r: 5%;  } /* 1s - hold */
+  40%  { r: 30%; } /* 3s - inhale */
+  60%  { r: 30%; } /* 2s - hold */
+  90%  { r: 5%;  } /* 3s - exhale */
+  100% { r: 5%;  } /* 2s - hold */
 }
 
 @keyframes Breath-In-Out--Non-Sym {
   0%   { r: 5%;  }
-  30%  { r: 30%; } /* 4s - inhale */
-  50%  { r: 30%; } /* 1s - hold */
-  80%  { r: 5%;  } /* 4s - exhale */
-  99%  { r: 5%;  } /* 1s - hold */
+  30%  { r: 30%; } /* 3s - inhale */
+  50%  { r: 30%; } /* 2s - hold */
+  80%  { r: 5%;  } /* 3s - exhale */
+  99%  { r: 5%;  } /* 2s - hold */
 }
 
 .bug #breath {
