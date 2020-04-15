@@ -1,10 +1,10 @@
 
+[![Breath Web App][icon]][app]
+
 [![Node CI ~ test status][gh-badge]][gh-link]
 [![Lighthouse audit][lh-badge]][lh-link]
 [![Find PWA directory][find-badge]][find-link]
 [![License: GPL][gpl-badge]][gpl]
-
-[![Breath Web App][icon]][app]
 
 # Breath #
 
@@ -15,12 +15,11 @@ _Try me!_ [__nfreear.github.io/breath__][app]
 
 
 _Resonant breathing biofeedback training_ has [been shown][sutarto 2012] to be
-[beneficial][wp] to relieve stress ([Moss 2004][])
+[beneficial][wp] to relieve stress ([Moss 2004][]).
 
----
 ## Release notes
 
- * View the [changelog](./CHANGELOG.md),
+ * View the [Change log](./CHANGELOG.md),
  * Gist: [original SVG][gist]
 
 ---
@@ -75,5 +74,5 @@ This is the current status, based on what I've managed to test so far!
 [find-link]: https://findpwa.com/app/breath-web-app "'Breath' on findPWA"
 [gh-badge]: https://github.com/nfreear/breath/workflows/Node%20CI/badge.svg
 [gh-link]: https://github.com/nfreear/breath/actions "Node CI — Test status"
-[app]: https://nfreear.github.io/breath/ "Try the 'Breath' Web App (beta)"
+[app]: https://nfreear.github.io/breath/?utm_source=readme "Try the 'Breath' Web App (beta)"
 [icon]: docs/lib/icon.svg

@@ -1,13 +1,18 @@
 {
-  "private": true,
   "name": "breath-web-app",
   "version": "0.9.5-beta",
   "description": "A Web & Mobile App to help you focus on and calm your breathing.",
   "keywords": [ "breathing", "biofeedback", "wellbeing", "web-app", "svg-animation", "smil" ],
   "license": "GPL-3.0+",
-  "homepage": "https://nfreear.github.io/breath/",
+  "homepage": "https://nfreear.github.io/breath/?utm_source=pkg",
   "repository": "https://github.com/nfreear/breath.git",
-  "author": "Nick Freear",
+  "bugs": "https://github.com/IET-OU/admins-bot/issues",
+  "author": "Nick Freear (https://twitter.com/nfreear)",
+  "files": [
+    "docs/index.html",
+    "docs/*",
+    "docs/lib/*"
+  ],
   "scripts": {
     "start": "cd ./docs && live-server --port=9001 --watch=./ --no-browser",
     "test": "semistandard"

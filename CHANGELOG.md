@@ -3,7 +3,7 @@
 
 ## 0.9.5-beta
 
- * Planned release: _14-April-2020_,
+ * Release: _15-April-2020_ (0.9.0-beta-11-g01910f0),
  * Switch from _10%_ to _20%_ breath-hold (_inhale 3s, hold 2s, exhale 3, hold 2 …_) [Bug #5],
  * Fix “_no matching service worker detected_“ and “_Page does not work offline_” [Bug #6],
  * Fix intermittent bug with `@keyframes` animation CSS [Bug #7],
