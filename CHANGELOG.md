@@ -1,6 +1,11 @@
 
 # Release notes #
 
+## 0.9.6-beta
+
+ * Stop phone sleeping ~ ?? [Bug #8]
+ * 3-D highlight (`radialGradient`) [Bug #9]
+
 ## 0.9.5-beta
 
  * Release: _15-April-2020_ (0.9.0-beta-11-g01910f0),
