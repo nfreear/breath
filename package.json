@@ -1,8 +1,8 @@
 {
   "name": "breath-web-app",
-  "version": "0.9.5-beta",
+  "version": "0.9.6-beta",
   "description": "A Web & Mobile App to help you focus on and calm your breathing.",
-  "keywords": [ "breathing", "biofeedback", "wellbeing", "web-app", "svg-animation", "smil" ],
+  "keywords": [ "breath", "breathing", "biofeedback", "HRV", "meditation", "wellbeing", "web-app", "svg-animation", "animation" ],
   "license": "GPL-3.0+",
   "homepage": "https://nfreear.github.io/breath/?utm_source=pkg",
   "repository": "https://github.com/nfreear/breath.git",

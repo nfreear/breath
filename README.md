@@ -64,15 +64,16 @@ This is the current status, based on what I've managed to test so far!
 [color]: https://www.rapidtables.com/web/color/color-wheel.html
 [gist]: https://gist.github.com/nfreear/c8666ec92360d09c4f6d559a4e4d55ec
   "Gist: nfreear / breathing-animation.web-app.svg"
-[gpl-badge]: docs/lib/badge-gpl.svg
+[gpl-badge]: https://nfreear.github.io/breath/lib/badge-gpl.svg
 [gpl]: https://gnu.org/licenses/gpl-3.0.html#content
   "© Nick Freear, 01-Apr-2020 | GNU General Public License version | GPL-3.0+"
-[lh-badge]: docs/lib/badge-lighthouse.svg
+[lh-badge]: https://nfreear.github.io/breath/lib/badge-lighthouse.svg
   "Lighthouse audit report — 99.2% — (97 | 100 | 100 | 100)"
 [lh-link]: https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https%3A//nfreear.github.io/breath/
-[find-badge]: docs/lib/badge-findpwa.svg
-[find-link]: https://findpwa.com/app/breath-web-app "'Breath' on findPWA"
+[find-badge]: https://nfreear.github.io/breath/lib/badge-findpwa.svg
+[find-link]: https://findpwa.com/app/breath-web-app?utm_source=nfreear "'Breath' on findPWA"
 [gh-badge]: https://github.com/nfreear/breath/workflows/Node%20CI/badge.svg
 [gh-link]: https://github.com/nfreear/breath/actions "Node CI — Test status"
+[unpkg]: https://unpkg.com/breath-web-app/
 [app]: https://nfreear.github.io/breath/?utm_source=readme "Try the 'Breath' Web App (beta)"
-[icon]: docs/lib/icon.svg
+[icon]: https://nfreear.github.io/breath/lib/icon.svg
