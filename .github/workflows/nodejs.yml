@@ -32,9 +32,10 @@ jobs:
         npm run build --if-present
         npm test
     - name: Git test
+      if: always()
       run: |
         git tag
-        git pull --tags
+        git pull --tags || 'true'
         git tag
         git describe --long --tag --always
 

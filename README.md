@@ -8,7 +8,7 @@
 
 # Breath #
 
-A Web & Mobile App to help you focus on and calm your breathing.
+A [Web & Mobile App][pwa] to help you focus on and calm your breathing.
 __Currently in 'Beta'.__
 
 _Try me!_ [__nfreear.github.io/breath__][app]
@@ -37,6 +37,14 @@ This is the current status, based on what I've managed to test so far!
  * ❌ _bug_ — MS Edge — _I'm investigating_,
  * ✖️ _NO_ — MS Internet Explorer — _not supported_!
 
+## Development
+
+```sh
+npm install
+npm start
+npm test
+```
+
 ---
 ## License
 
@@ -50,23 +58,13 @@ This is the current status, based on what I've managed to test so far!
 "(PDF) Moss D. Heart rate variability (HRV) biofeedback. Psychophysiology Today. 2004;(1):4–11. Retrieved 04-April-2020."
 [moss 2004]: https://scholar.google.com/scholar?q=Moss+%22Heart+rate+variability+%28HRV%29+biofeedback%22#
 "Moss D. Heart rate variability (HRV) biofeedback. Psychophysiology Today. 2004;(1):4–11. On Google Scholar."
-[eddie]: https://eddiestern.com/the-breathing-app/
-[android]: https://play.google.com/store/apps/details?id=org.ayny.breathingapp#
-  "The Breathing App, on Google Play for Android."
-[ios]: https://apps.apple.com/us/app/the-breathing-app/id1285982210
-  "The Breathing App, on the Apple App Store for iOS."
-[sergey]: https://play.google.com/store/apps/developer?id=Sergey+Varichev
-[video]: https://youtu.be/xXpsoGHnEiU?list=UUNMy2KojFn0jMbxbHZVppGw&index=4#
-  "Breathing App Quick Start, 2017, on YouTube."
-[pwa]: https://en.wikipedia.org/wiki/Progressive_web_application#Service_workers
-[ball]: https://en.wikipedia.org/wiki/File:Racquetball_ball.svg
-[anim-ball]: https://commons.wikimedia.org/wiki/File:Soccer_ball_animated.svg
-[color]: https://www.rapidtables.com/web/color/color-wheel.html
+[pwa]: https://en.wikipedia.org/wiki/Progressive_web_application
+  "Progressive web application (PWA), on Wikipedia"
 [gist]: https://gist.github.com/nfreear/c8666ec92360d09c4f6d559a4e4d55ec
   "Gist: nfreear / breathing-animation.web-app.svg"
 [gpl-badge]: https://nfreear.github.io/breath/lib/badge-gpl.svg
 [gpl]: https://gnu.org/licenses/gpl-3.0.html#content
-  "© Nick Freear, 01-Apr-2020 | GNU General Public License version | GPL-3.0+"
+  "© Nick Freear, 01-Apr-2020 | GNU General Public License | GPL-3.0+"
 [lh-badge]: https://nfreear.github.io/breath/lib/badge-lighthouse.svg
   "Lighthouse audit report — 99.2% — (97 | 100 | 100 | 100)"
 [lh-link]: https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https%3A//nfreear.github.io/breath/
