@@ -18,6 +18,7 @@ if (NAV.onLine) {
 
 const ga = window.ga || (() => {}); // function () {};
 const PATH = window.location.pathname;
+const QUERY = window.location.search;
 const $HTML = document.querySelector('html');
 const $PAUSE_BTN = document.querySelector('#pause-btn');
 const $BREATH = document.querySelector('#breath');
@@ -26,6 +27,7 @@ ga('create', 'UA-8330079-9', 'auto');
 ga('send', 'pageview');
 
 urlSetAnimationDuration();
+urlSetHighlight();
 
 let isPlaying = false;
 
@@ -44,13 +46,20 @@ let isPlaying = false;
  *  @see [moss-2004] & [sutarto-2012] in the README.
  */
 function urlSetAnimationDuration () {
-  const M_DUR = window.location.search.match(/duration=(\d{1,2}(\.\d)?s)/);
+  const M_DUR = QUERY.match(/duration=(\d{1,2}(\.\d)?s)/);
   const DURATION = M_DUR ? M_DUR[1] : '10s';
   const STYLES = filterComputedStyle($BREATH);
 
   console.warn('animation-duration:', DURATION, STYLES);
 
   $BREATH.style.animationDuration = DURATION;
+}
+
+function urlSetHighlight () {
+  const IS_3D = /(highlight|3d)=(1|true|yes)/.test(QUERY);
+
+  $HTML.classList.remove(IS_3D ? 'is-flat' : 'is-3d');
+  $HTML.classList.add(IS_3D ? 'is-3d' : 'is-flat');
 }
 
 function filterComputedStyle ($elem, filterRegex = /^animation-/) {

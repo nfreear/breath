@@ -127,13 +127,12 @@ svg #breath {
   fill: var(--silver);
 }
 
-.rg-stop-inner  { stop-color: #fafafa; }
-.rg-stop-middle { stop-color: #ddd; }
-.rg-stop-outer  { stop-color: #ccc; }
+.rg-s-inner  { stop-color: #fafafa; }
+.rg-s-middle { stop-color: #ddd; }
+.rg-s-outer  { stop-color: #ccc; }
 
 .is-3d #breath {
-  fill: url(#rad-gradient-04);
-  X-fill: radial-gradient(circle at farthest-corner, #fff, #ddd);
+  fill: url(#radial-gradient-01);
 }
 
 .Off-White {
