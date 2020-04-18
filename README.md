@@ -2,6 +2,7 @@
 [![Breath Web App][icon]][app]
 
 [![Node CI ~ test status][gh-badge]][gh-link]
+[![Breath App on NPMJS.com][npm-badge]][npm-link]
 [![Lighthouse audit][lh-badge]][lh-link]
 [![Find PWA directory][find-badge]][find-link]
 [![License: GPL][gpl-badge]][gpl]
@@ -70,6 +71,8 @@ npm test
 [lh-link]: https://lighthouse-dot-webdotdevsite.appspot.com/lh/html?url=https%3A//nfreear.github.io/breath/
 [find-badge]: https://nfreear.github.io/breath/lib/badge-findpwa.svg
 [find-link]: https://findpwa.com/app/breath-web-app?utm_source=nfreear "'Breath' on findPWA"
+[npm-badge]: https://img.shields.io/npm/v/breath-web-app.svg "'Breath' on NPMJS"
+[npm-link]: https://npmjs.com/package/breath-web-app?utm_source=nfreear
 [gh-badge]: https://github.com/nfreear/breath/workflows/Node%20CI/badge.svg
 [gh-link]: https://github.com/nfreear/breath/actions "Node CI — Test status"
 [unpkg]: https://unpkg.com/breath-web-app/

@@ -3,29 +3,15 @@
 */
 
 import * as APP_ABOUT from './app-about.js';
+import setupAnalytics from './analytics.js';
 
-const NAV = window.navigator;
-
-if (NAV.onLine) {
-/* eslint-disable */
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  /* eslint-enable */
-  console.debug('Breath App: online');
-} else { console.debug('Breath App: offline'); }
-
-const ga = window.ga || (() => {}); // function () {};
 const PATH = window.location.pathname;
 const QUERY = window.location.search;
 const $HTML = document.querySelector('html');
 const $PAUSE_BTN = document.querySelector('#pause-btn');
 const $BREATH = document.querySelector('#breath');
 
-ga('create', 'UA-8330079-9', 'auto');
-ga('send', 'pageview');
-
+setupAnalytics();
 urlSetAnimationDuration();
 urlSetHighlight();
 
@@ -46,8 +32,7 @@ let isPlaying = false;
  *  @see [moss-2004] & [sutarto-2012] in the README.
  */
 function urlSetAnimationDuration () {
-  const M_DUR = QUERY.match(/duration=(\d{1,2}(\.\d)?s)/);
-  const DURATION = M_DUR ? M_DUR[1] : '10s';
+  const DURATION = param(/duration=(\d{1,2}(\.\d)?s)/, '10s');
   const STYLES = filterComputedStyle($BREATH);
 
   console.warn('animation-duration:', DURATION, STYLES);
@@ -56,10 +41,16 @@ function urlSetAnimationDuration () {
 }
 
 function urlSetHighlight () {
-  const IS_3D = /(highlight|3d)=(1|true|yes)/.test(QUERY);
+  const IS_3D = param(/highlight=(\w+)/, '3d') === '3d';
 
   $HTML.classList.remove(IS_3D ? 'is-flat' : 'is-3d');
   $HTML.classList.add(IS_3D ? 'is-3d' : 'is-flat');
+}
+
+function param (regex, def = null) {
+  const MATCHES = QUERY.match(regex);
+
+  return MATCHES ? MATCHES[1] : def;
 }
 
 function filterComputedStyle ($elem, filterRegex = /^animation-/) {
@@ -90,9 +81,9 @@ function togglePlayPause (ev) {
 */
 console.debug('Path:', PATH);
 
-if ('serviceWorker' in NAV) {
+if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    NAV.serviceWorker.register('./service-worker.js') // , { scope: `${PATH}` }
+    navigator.serviceWorker.register('./service-worker.js') // , { scope: `${PATH}` }
       .then(() => console.warn('Breath App: service-worker.js registered OK!'));
   });
 }
