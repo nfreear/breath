@@ -65,6 +65,8 @@ function filterComputedStyle ($elem, filterRegex = /^animation-/) {
 function togglePlayPause (ev) {
   ev.preventDefault();
 
+  dispatchAppEvent(isPlaying);
+
   console.warn(`Breath App: ${isPlaying ? 'PAUSE' : 'PLAY'}`, ev, APP_ABOUT);
 
   $HTML.classList.remove(isPlaying ? 'is-playing' : 'is-paused');
@@ -75,6 +77,12 @@ function togglePlayPause (ev) {
 
     isPlaying = !isPlaying;
   }, 50);
+}
+
+function dispatchAppEvent (isPlaying) {
+  const event = new window.CustomEvent(`breathapp:${isPlaying ? 'pause' : 'play'}`);
+
+  $BREATH.dispatchEvent(event);
 }
 
 /**

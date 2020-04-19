@@ -18,35 +18,44 @@ export default function ($BREATH) {
   }
 
   let iterCount = 0;
-  let timerIn;
-  let timerEx;
+  const timers = {};
 
-  $BREATH.addEventListener('animationstart', ev => onAnimation(ev));
+  $BREATH.addEventListener('breathapp:play', ev => onAnimation(ev));
   $BREATH.addEventListener('animationiteration', ev => onAnimation(ev));
 
-  $BREATH.addEventListener('animationend', ev => {
-    console.debug('Animation end');
+  $BREATH.addEventListener('breathapp:pause', ev => {
+    console.debug('>> sound.', ev.type);
+
     $SOUND.pause();
 
-    if (timerIn) { clearTimeout(timerIn); }
-    if (timerEx) { clearTimeout(timerEx); }
+    clearTimeouts();
   });
 
   function onAnimation (ev) {
-    console.debug(`Animation iteration count: ${iterCount}`, ev.type);
+    console.debug(`>> sound. ${ev.type}:`, iterCount);
     iterCount++;
 
     $SOUND.load(); // Reset.
 
-    timerIn = setTimeout(() => {
+    clearTimeouts();
+
+    timers.playIn = setTimeout(() => {
       console.debug('Audio play');
       $SOUND.play();
-    },
-    IN_PLAY_OFFSET);
+    }, IN_PLAY_OFFSET);
 
-    setTimeout(() => $SOUND.pause(), IN_STOP_OFFSET);
+    timers.stopIn = setTimeout(() => $SOUND.pause(), IN_STOP_OFFSET);
 
-    timerEx = setTimeout(() => $SOUND.play(), EX_PLAY_OFFSET);
-    setTimeout(() => $SOUND.pause(), EX_STOP_OFFSET);
+    timers.playEx = setTimeout(() => $SOUND.play(), EX_PLAY_OFFSET);
+    timers.stopEx = setTimeout(() => $SOUND.pause(), EX_STOP_OFFSET);
+  }
+
+  function clearTimeouts () {
+    for (const it in timers) {
+      if (timers[it]) {
+        clearTimeout(timers[it]);
+        timers[it] = null;
+      }
+    }
   }
 }

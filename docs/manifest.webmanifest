@@ -6,8 +6,9 @@
   "start_url": "./?utm_source=pwa&v=beta&3d=true",
   "display": "fullscreen",
   "orientation": "any",
-  "background_color": "#004050",
-  "theme_color": "#e8e8e8",
+  "background_color": "#e8e8e8",
+  "X-background_color": "#004050",
+  "theme_color": "#004050",
   "icons": [
     {
       "src": "lib/icon.svg",
