@@ -4,6 +4,7 @@
 
 import * as APP_ABOUT from './app-about.js';
 import setupAnalytics from './analytics.js';
+import setupAudio from './sound.js';
 
 const PATH = window.location.pathname;
 const QUERY = window.location.search;
@@ -12,6 +13,7 @@ const $PAUSE_BTN = document.querySelector('#pause-btn');
 const $BREATH = document.querySelector('#breath');
 
 setupAnalytics();
+setupAudio($BREATH);
 urlSetAnimationDuration();
 urlSetHighlight();
 

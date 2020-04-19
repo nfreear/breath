@@ -6,7 +6,7 @@
 
 /* eslint-env worker */
 
-const PATH = location.pathname.replace(/\/[^/]+$/, '') + '/lib'; // '/docs/lib/service-worker.js'
+const PATH = location.pathname.replace(/\/[^/]+$/, '') + '/lib'; // '/docs/service-worker.js'
 const CACHE_NAME = 'breath-app-cache';
 
 console.warn('Worker: location', PATH, location);
@@ -25,6 +25,8 @@ self.addEventListener('install', event => {
           `${PATH}/icon.png`,
           `${PATH}/icon.svg`,
           `${PATH}/index.js`,
+          `${PATH}/sound.js`, // Was: 'audio.js'
+          `${PATH}/soundcloud-tec_studio-drone-353976-lq.mp3`,
           `${PATH}/style.css`
           // '/offline.html'
         ]

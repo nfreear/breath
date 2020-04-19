@@ -4,7 +4,8 @@
 ## 0.9.6-beta
 
  * Stop phone sleeping ~ ?? [Bug #8]
- * 3-D highlight (`radialGradient`) [Bug #9]
+ * Add 3-D highlight (`radialGradient`) [Bug #9]
+ * Add [drone][] audio sound [Bug #10]
 
 ## 0.9.5-beta
 
@@ -41,3 +42,5 @@
   "Keyframe Animation Syntax, by Chris Coyier, 19-Sep-2016."
 [cani-css-anim]:https://caniuse.com/#feat=css-animation
   "Can I use 'CSS Animation' (keyframe)?"
+[drone]: https://freesound.org/people/tec_studio/sounds/353976/
+  "'drone.wav' by T.E.C. Studios USA, on SoundCloud | License: CC-0"
