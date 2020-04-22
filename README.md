@@ -76,5 +76,6 @@ npm test
 [gh-badge]: https://github.com/nfreear/breath/workflows/Node%20CI/badge.svg
 [gh-link]: https://github.com/nfreear/breath/actions "Node CI — Test status"
 [unpkg]: https://unpkg.com/breath-web-app/
-[app]: https://nfreear.github.io/breath/?utm_source=readme "Try the 'Breath' Web App (beta)"
+[app]: https://nfreear.github.io/breath/?utm_source=readme&sound=baltic
+  "Try the 'Breath' Web App (beta) (sound: Baltic waves)"
 [icon]: https://nfreear.github.io/breath/lib/icon.svg

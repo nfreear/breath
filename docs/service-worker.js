@@ -27,7 +27,7 @@ self.addEventListener('install', event => {
           `${PATH}/index.js`,
           `${PATH}/sound.js`, // Was: 'audio.js'
           `${PATH}/style.css`,
-          './sound/freesound-cactus2003-dark-103340-lq-clip.mp3',  // dur=44s;
+          './sound/freesound-cactus2003-dark-103340-lq-clip.mp3', /// dur=44s;
           './sound/freesound-pulswelle-baltic-339517-lq-clip.mp3', // dur=30s;
           './sound/freesound-tec_studio-drone-353976-lq.mp3' // dur=34s; Was: `${PATH}/soundcloud-tec_studio-drone-353976-lq.mp3`,
           // '/offline.html'
