@@ -26,8 +26,10 @@ self.addEventListener('install', event => {
           `${PATH}/icon.svg`,
           `${PATH}/index.js`,
           `${PATH}/sound.js`, // Was: 'audio.js'
-          `${PATH}/soundcloud-tec_studio-drone-353976-lq.mp3`,
-          `${PATH}/style.css`
+          `${PATH}/style.css`,
+          './sound/freesound-cactus2003-dark-103340-lq-clip.mp3',  // dur=44s;
+          './sound/freesound-pulswelle-baltic-339517-lq-clip.mp3', // dur=30s;
+          './sound/freesound-tec_studio-drone-353976-lq.mp3' // dur=34s; Was: `${PATH}/soundcloud-tec_studio-drone-353976-lq.mp3`,
           // '/offline.html'
         ]
       );
@@ -36,6 +38,14 @@ self.addEventListener('install', event => {
 });
 
 // https://developers.google.com/web/ilt/pwa/lab-caching-files-with-service-worker#3_serve_files_from_the_cache
-self.addEventListener('fetch', () => console.log('fetch')); // >> ??
+self.addEventListener('fetch', ev => console.debug('fetch:', fetchUri(ev).pathname, ev)); // >> ??
+
+function fetchUri (ev) {
+  const URI = new URL(ev.request.url);
+
+  // console.debug('fetch URI:', URI);
+
+  return URI;
+}
 
 // End.

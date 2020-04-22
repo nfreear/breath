@@ -1,5 +1,7 @@
 
-export default function /* setupAnalytics */ (analyticsId = 'UA-8330079-9') {
+const ANALYTICS_ID = 'UA-8330079-9';
+
+export default function /* setupAnalytics */ () {
   if (navigator.onLine) {
     /* eslint-disable */
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -8,13 +10,13 @@ export default function /* setupAnalytics */ (analyticsId = 'UA-8330079-9') {
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
     /* eslint-enable */
 
-    console.debug('Breath App: online');
+    console.debug('Breath App: online (analytics)');
   } else {
-    console.debug('Breath App: offline');
+    console.debug('Breath App: offline (analytics)');
   }
 
   const ga = window.ga || (() => {}); // function () {};
 
-  ga('create', analyticsId, 'auto');
+  ga('create', ANALYTICS_ID, 'auto');
   ga('send', 'pageview');
 }
