@@ -3,7 +3,7 @@
 */
 
 export default function ($BREATH) {
-  const WITH_SOUND = /sound=1/.test(window.location.href);
+  const WITH_SOUND = /sound=(1|true)/.test(window.location.href);
 
   // const $BREATH = document.querySelector('#breath');
   const $SOUND = document.querySelector('#sound');
@@ -19,6 +19,8 @@ export default function ($BREATH) {
 
   let iterCount = 0;
   const timers = {};
+
+  $SOUND.volume = 0.1;
 
   $BREATH.addEventListener('breathapp:play', ev => onAnimation(ev));
   $BREATH.addEventListener('animationiteration', ev => onAnimation(ev));
@@ -40,7 +42,7 @@ export default function ($BREATH) {
     clearTimeouts();
 
     timers.playIn = setTimeout(() => {
-      console.debug('Audio play');
+      console.debug('Audio play. Volume:', $SOUND.volume);
       $SOUND.play();
     }, IN_PLAY_OFFSET);
 

@@ -3,11 +3,10 @@
   "short_name": "Breath App",
   "name": "Breath Web App (beta)",
   "description": "A Web & Mobile App to help you focus on and calm your breathing. | © Nick Freear | License: GPL-3+",
-  "start_url": "./?utm_source=pwa&v=beta&3d=true",
+  "start_url": "./?utm_source=pwa&v=beta&highlight=3d",
   "display": "fullscreen",
   "orientation": "any",
-  "background_color": "#e8e8e8",
-  "X-background_color": "#004050",
+  "background_color": "#004050",
   "theme_color": "#004050",
   "icons": [
     {

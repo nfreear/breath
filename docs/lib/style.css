@@ -127,9 +127,10 @@ svg #breath {
   fill: var(--silver);
 }
 
-.rg-s-inner  { stop-color: #fafafa; }
+.rg-s-inner  { stop-color: #fbfbfb; }
 .rg-s-middle { stop-color: #ddd; }
 .rg-s-outer  { stop-color: #ccc; }
+.rg-s-edge   { stop-color: #b6b6b6; }
 
 .is-3d #breath {
   fill: url(#radial-gradient-01);

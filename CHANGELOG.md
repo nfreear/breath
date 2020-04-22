@@ -5,7 +5,7 @@
 
  * Stop phone sleeping ~ ?? [Bug #8]
  * Add 3-D highlight (`radialGradient`) [Bug #9]
- * Add [drone][] audio sound [Bug #10]
+ * Add [ambient][] audio sounds from [freesound][] ([drone][], [dark][], [baltic][]) [Bug #10]
 
 ## 0.9.5-beta
 
@@ -42,5 +42,13 @@
   "Keyframe Animation Syntax, by Chris Coyier, 19-Sep-2016."
 [cani-css-anim]:https://caniuse.com/#feat=css-animation
   "Can I use 'CSS Animation' (keyframe)?"
+[freesound]: https://freesound.org/search/?q=sea
+  "Freesound is a collaborative database of Creative Commons Licensed sounds | 15 years of freesound!"
 [drone]: https://freesound.org/people/tec_studio/sounds/353976/
   "'drone.wav' by T.E.C. Studios USA, on SoundCloud | License: CC-0"
+[dark]: https://freesound.org/people/CaCtUs2003/sounds/103340/
+  "Dark_Ambience.wav by CaCtUs2003 | License: CC-0"
+[baltic]: https://freesound.org/people/pulswelle/sounds/339517/
+  "'Waves at Baltic Sea shore.wav' by pulswelle | License: CC-0"
+[ambient]: https://blog.freesound.org/?p=1141
+  "The Elementary Wave: creating ambient wave/pads/soundscapes. Posted on 28-Feb-2020 by erokia."
