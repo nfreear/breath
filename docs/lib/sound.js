@@ -16,7 +16,7 @@ const IN_STOP_OFFSET = IN_PLAY_OFFSET + 3000;
 const EX_PLAY_OFFSET = IN_STOP_OFFSET + 2000;
 const EX_STOP_OFFSET = EX_PLAY_OFFSET + 3000;
 
-const duration = 500; // Millis.
+const duration = 400; // Milliseconds.
 
 export default function ($BREATH) {
   const SEL_SOUND = param(/sound=(drone|dark|baltic|amb3)/);
@@ -67,16 +67,13 @@ export default function ($BREATH) {
 
   function volumeHold () {
     adjustVolume($SOUND, VOLUME.hold, { duration })
-      .then(() => console.debug('Hold ~ volume:', $SOUND.volume));
+      .then(el => console.debug('Hold ~ volume:', el.volume));
   }
 
   function volumeBreathe () {
     adjustVolume($SOUND, VOLUME.breathe, { duration })
-      .then(() => console.debug('Breathe ~ volume:', $SOUND.volume));
+      .then(el => console.debug('Breathe ~ volume:', el.volume));
   }
-
-  // function volumeHold () { $SOUND.volume = VOLUME_HOLD; console.debug('Hold ~ volume:', $SOUND.volume); }
-  // function volumeBreathe () { $SOUND.volume = VOLUME_BREATHE; console.debug('Breathe ~ volume:', $SOUND.volume);  }
 
   function clearTimeouts () {
     for (const it in timers) {

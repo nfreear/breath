@@ -3,9 +3,9 @@
 
 ## 0.9.6-beta
 
- * Stop phone sleeping ~ ?? [Bug #8]
+ * Add [ambient][] audio sounds from [freesound][] ([drone][], [dark][], [baltic][], [amb3][]) [Bug #10]
  * Add 3-D highlight (`radialGradient`) [Bug #9]
- * Add [ambient][] audio sounds from [freesound][] ([drone][], [dark][], [baltic][]) [Bug #10]
+ * Stop phone sleeping ~ ?? [Bug #8]
 
 ## 0.9.5-beta
 
@@ -50,6 +50,8 @@
   "Dark_Ambience.wav by CaCtUs2003 | License: CC-0"
 [baltic]: https://freesound.org/people/pulswelle/sounds/339517/
   "'Waves at Baltic Sea shore.wav' by pulswelle | License: CC-0"
+[amb3]: https://freesound.org/people/Erokia/sounds/432500/
+  "'Ambient Wave 3 - (Harmonics)' by Erokia | License: CC-by-nc"
 [ambient]: https://blog.freesound.org/?p=1141
-  "The Elementary Wave: creating ambient wave/pads/soundscapes. Posted on 28-Feb-2020 by erokia."
+  "Blog: The Elementary Wave: creating ambient wave/pads/soundscapes. Posted on 28-Feb-2020 by Erokia."
 [conv]: https://www.online-convert.com/result/4375c865-ae1c-4e55-81ba-ecb3a4792a0c

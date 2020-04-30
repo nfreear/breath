@@ -13,7 +13,7 @@ export async function adjustVolume (
   {
     duration = 1000,
     easing = swing,
-    interval = 13
+    interval = 30 // Was: 13 (ms)
   } /* : {
         duration?: number,
         easing?: typeof swing,
@@ -25,13 +25,13 @@ export async function adjustVolume (
 
   if (!delta || !duration || !easing || !interval) {
     element.volume = newVolume;
-    return Promise.resolve();
+    return Promise.resolve(element);
   }
 
   const ticks = Math.floor(duration / interval);
   let tick = 1;
 
-  return new Promise/* <void> */((resolve) => {
+  return new Promise/* <void> */(resolve => {
     const timer = setInterval(() => {
       element.volume = originalVolume + (
         easing(tick / ticks) * delta
@@ -39,7 +39,7 @@ export async function adjustVolume (
 
       if (++tick === ticks) {
         clearInterval(timer);
-        resolve();
+        resolve(element);
       }
     }, interval);
   });

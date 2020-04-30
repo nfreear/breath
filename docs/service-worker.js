@@ -18,6 +18,7 @@ self.addEventListener('install', event => {
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll(
         [
+          `${PATH}/adjust-volume.js`,
           `${PATH}/analytics.js`,
           `${PATH}/animate.css`,
           `${PATH}/app-about.html`,

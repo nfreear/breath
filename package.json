@@ -11,7 +11,8 @@
   "files": [
     "docs/index.html",
     "docs/*",
-    "docs/lib/*"
+    "docs/lib/*",
+    "docs/sound/*"
   ],
   "scripts": {
     "start": "cd ./docs && live-server --port=9001 --watch=./ --no-browser",
