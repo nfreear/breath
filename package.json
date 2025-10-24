@@ -1,8 +1,19 @@
 {
   "name": "breath-web-app",
   "version": "0.9.6-beta",
+  "type": "module",
   "description": "A Web & Mobile App to help you focus on and calm your breathing.",
-  "keywords": [ "breath", "breathing", "biofeedback", "HRV", "meditation", "wellbeing", "web-app", "svg-animation", "animation" ],
+  "keywords": [
+    "breath",
+    "breathing",
+    "biofeedback",
+    "HRV",
+    "meditation",
+    "wellbeing",
+    "web-app",
+    "svg-animation",
+    "animation"
+  ],
   "license": "GPL-3.0+",
   "homepage": "https://nfreear.github.io/breath/?utm_source=pkg&sound=baltic",
   "repository": "https://github.com/nfreear/breath.git",
@@ -15,11 +26,12 @@
     "docs/sound/*"
   ],
   "scripts": {
-    "start": "cd ./docs && live-server --port=9001 --watch=./ --no-browser",
-    "test": "semistandard"
+    "start": "cd ./docs && servor",
+    "test": "eslint ."
   },
   "devDependencies": {
-    "live-server": "^1.2.1",
-    "semistandard": "^14.2.0"
+    "eslint": "^9.38.0",
+    "neostandard": "^0.12.2",
+    "servor": "^4.0.2"
   }
 }
