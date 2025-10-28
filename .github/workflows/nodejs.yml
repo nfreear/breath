@@ -1,49 +1,68 @@
 # See :~ https://github.com/actions/starter-workflows/blob/master/ci/node.js.yml
-
 name: Node CI
 
 on: [push]
+# See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+env:
+  NODE_VERSION: 24
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
+  deploy:
+    name: Lint & Deploy
 
-  Lint:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
 
     # https://github.com/marketplace/actions/skip-based-on-commit-message
-    if: "!contains( github.event.head_commit.message, 'ci skip' )"
-
-    strategy:
-      matrix:
-        node-version: [ 12.x ]
-        # Was: node-version: [8.x, 10.x, 12.x]
+    # if: "!contains( github.event.head_commit.message, 'ci skip' )"
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
+    - name: Set up Node.js ${{ env.NODE_VERSION }}
+      uses: actions/setup-node@v3
       with:
-        fetch-depth: 5
-        # Was: fetch-depth: 1
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
-      run: |
-        npm ci
-        npm run build --if-present
-        npm test
-    - name: Git test
-      if: always()
-      run: |
-        git tag
-        git pull --tags || 'true'
-        git tag
-        git describe --long --tag --always
+        node-version: ${{ env.NODE_VERSION }}
+        check-latest: true
+        # cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
+    #- name: Git test
+    #  if: always()
+    #  run: |
+    #    git tag
+    #    git pull --tags || 'true'
+    #    git tag
+    #    git describe --long --tag --always
 
-  Skip:
-    runs-on: ubuntu-latest
-    if: "contains( github.event.head_commit.message, 'ci skip' )"
-    steps:
-    - name: Skip build
-      run: echo Skipping build.
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        # Upload one directory.
+        path: docs
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+
+  #Skip:
+  #  runs-on: ubuntu-latest
+  #  if: "contains( github.event.head_commit.message, 'ci skip' )"
+  #  steps:
+  #  - name: Skip build
+  #    run: echo Skipping build.
 
 # End.
