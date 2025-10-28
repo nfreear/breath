@@ -26,8 +26,8 @@
     "docs/sound/*"
   ],
   "scripts": {
-    "start": "cd ./docs && servor",
-    "test": "eslint ."
+    "start": "npx servor",
+    "test": "npx eslint ."
   },
   "devDependencies": {
     "eslint": "^9.38.0",
