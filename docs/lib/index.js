@@ -19,7 +19,7 @@ urlSetHighlight();
 
 let isPlaying = false;
 
-['click', 'keypress'].map(evName => {
+['click', 'keypress'].forEach(evName => {
   $BREATH.addEventListener(evName, ev => togglePlayPause(ev));
 
   $PAUSE_BTN.addEventListener(evName, ev => togglePlayPause(ev));
@@ -93,7 +93,7 @@ console.debug('Path:', PATH);
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./service-worker.js') // , { scope: `${PATH}` }
+    navigator.serviceWorker.register('./service-worker.js', { type: 'module' }) // , { scope: `${PATH}` }
       .then(() => console.warn('Breath App: service-worker.js registered OK!'));
   });
 }

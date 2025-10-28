@@ -1,4 +1,3 @@
-
 const WIN = window;
 const ABOUT_HTML_PATH = 'lib/app-about.html';
 const $HTML = document.querySelector('html');

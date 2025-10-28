@@ -1,4 +1,3 @@
-
 const ANALYTICS_ID = 'UA-8330079-9';
 
 export default function /* setupAnalytics */ () {
