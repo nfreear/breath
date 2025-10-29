@@ -11,8 +11,9 @@ export default function urlsToCache () {
     `${PATH}/lib/adjust-volume.js`,
     `${PATH}/lib/analytics.js`,
     `${PATH}/lib/animate.css`,
-    `${PATH}/lib/app-about.html`,
+    // `${PATH}/lib/app-about.html`, (Deprecated)
     `${PATH}/lib/app-about.js`,
+    `${PATH}/lib/BreathAppElement.js`,
     `${PATH}/lib/icon.png`,
     `${PATH}/lib/icon.svg`,
     `${PATH}/lib/index.js`,

@@ -7,10 +7,19 @@
   --dark-teal: rgb(0, 32, 48); /* Hex: #004050; */
   --dark-teal-a: rgba(0,64,80,1);
   --darker-teal: rgba(0,32,48,1);
+  --off-white-b: #f5f5f5;
   --off-white: #DDD;
   --silver: #C0C0C0;
   --mid-grey: #999;
+  --dark-grey: #333;
   --zoom: 1;
+}
+
+::part(button),
+::part(a),
+* {
+  outline-offset: .15rem;
+  text-underline-offset: .22rem;
 }
 
 /* Counter-intuitively, larger fonts on big-screens! (iPad+) */
@@ -78,9 +87,22 @@ a:hover {
   border-color: #eee;
 }
 
+#breath-button {
+  background: transparent;
+  border: none;
+  display: block;
+  height: 99%;
+  width: 99%;
+  margin: auto;
+  outline-offset: -.3rem;
+}
+
+about-dialog::part(launchButton),
 a#fork-me {
   border-bottom: 3px dotted transparent;
+  border-radius: .3rem;
   bottom: .5rem;
+  font-size: inherit;
   letter-spacing: .1rem;
   padding: .8rem;
   position: absolute;
@@ -94,6 +116,7 @@ a#fork-me:hover {
   border-color: var(--mid-grey);
 }
 
+sr-only,
 .sr-only {
   position: absolute;
   width: 1px;
@@ -118,6 +141,34 @@ a .beta {
 .app-about--close .app-about {
   height: 1px;
   min-height: 0;
+}
+
+about-dialog {
+  &::part(dialog) {
+    background-color: var(--off-white-b);
+    color: var(--dark-grey);
+  }
+
+  &::part(h1) {
+    font-weight: normal;
+  }
+
+  &::part(p) {
+    line-height: 1.5;
+  }
+
+  &::part(launchButton) {
+    background-color: var(--dark-grey);
+    color: var(--off-white, white);
+    font-size: inherit;
+  }
+
+  &::part(closeButton) {
+    border-radius: 50%;
+    font-size: larger;
+    height: 3.5rem;
+    width: 3.5rem;
+  }
 }
 
 /* SVG styles.

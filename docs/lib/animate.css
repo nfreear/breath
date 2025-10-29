@@ -55,7 +55,7 @@
 #breath {
   animation-play-state: paused;
   /* animation-name: Breath-In-Out-10pc; */
-   animation-duration: 10s; /* or: Xms */ /* Was: 12s! */
+   animation-duration: var(--animation-duration, 10s); /* or: Xms */ /* Was: 12s! */
    animation-iteration-count: infinite;
    animation-direction: alternate; /* or: normal */
    animation-timing-function: ease-in-out; /* or: ease, ease-in, ease-in-out, linear, cubic-bezier(x1, y1, x2, y2) */
@@ -63,6 +63,7 @@
    animation-delay: 10ms; /* or: Xms */
 }
 
+[ data-is-playing = true ] #breath,
 .is-playing #breath {
   animation-play-state: running;
 }

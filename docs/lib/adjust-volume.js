@@ -20,6 +20,7 @@ export async function adjustVolume (
         interval?: number,
   } */ = {}
 ) {
+  console.assert(element, 'Expecting an audio element.');
   const originalVolume = element.volume;
   const delta = newVolume - originalVolume;
 

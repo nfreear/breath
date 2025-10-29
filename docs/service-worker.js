@@ -14,8 +14,9 @@ self.addEventListener('install', (event) => {
 
   event.waitUntil(
     caches.open(cacheName).then((cache) => {
-      console.debug('sw.js ~ Opened cache');
-      return cache.addAll(urlsToCache());
+      const urlsForCache = urlsToCache();
+      console.debug('sw.js ~ Opened cache:', urlsForCache);
+      return cache.addAll(urlsForCache);
     })
   );
 });
@@ -31,7 +32,7 @@ self.addEventListener('fetch', (event) => {
       const cachedResponse = await caches.match(event.request);
       // Return it if we found one.
       if (cachedResponse) {
-        console.debug('sw.js ~ Cache hit - return response');
+        console.debug('sw.js ~ Cache hit - return response'); //, event.request.url);
         return cachedResponse;
       }
       // If we didn't find a match in the cache, use the network.

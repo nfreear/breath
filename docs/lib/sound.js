@@ -1,15 +1,10 @@
+import { adjustVolume } from './adjust-volume.js';
+
+const { HTMLElement, location } = window;
+
 /*!
   Breath Web App | © Nick Freear | License: GPL-3.0+.
 */
-
-import { adjustVolume } from './adjust-volume.js';
-
-const QUERY = window.location.search;
-
-const VOLUME = {
-  breathe: 0.25,
-  hold: 0.03
-};
 
 const IN_PLAY_OFFSET = 1000; // Milliseconds.
 const IN_STOP_OFFSET = IN_PLAY_OFFSET + 3000;
@@ -18,75 +13,96 @@ const EX_STOP_OFFSET = EX_PLAY_OFFSET + 3000;
 
 const duration = 400; // Milliseconds.
 
-export default function ($BREATH) {
-  const SEL_SOUND = param(/sound=(drone|dark|baltic|amb3)/);
+export class SoundManagerElement extends HTMLElement {
+  #iterCount = 0;
+  #audioElem;
+  #timers = {};
 
-  const ALL_AUDIOS = document.querySelectorAll('audio[ data-id ]');
-  const $SOUND = SEL_SOUND ? [...ALL_AUDIOS].find(snd => snd.dataset.id === SEL_SOUND) : null;
+  get #eventPfx () { return 'breathapp:'; }
+  get #soundRegex () { return /^(drone|dark|baltic|amb3)$/; }
 
-  console.debug('Breath App - sound:', SEL_SOUND, ALL_AUDIOS, $SOUND);
-
-  if (!SEL_SOUND) {
-    console.debug('Breath App -', 'no sound');
-    return;
+  get #soundParam () {
+    const url = new URL(location);
+    const sound = url.searchParams.get('sound');
+    return sound && this.#soundRegex.test(sound) ? sound : null;
   }
 
-  let iterCount = 0;
-  const timers = {};
-
-  $BREATH.addEventListener('breathapp:play', ev => onAnimation(ev));
-  $BREATH.addEventListener('animationiteration', ev => onAnimation(ev));
-
-  $BREATH.addEventListener('breathapp:pause', ev => {
-    console.debug('>> sound.', ev.type);
-
-    $SOUND.pause();
-
-    clearTimeouts();
-  });
-
-  function onAnimation (ev) {
-    console.debug(`>> sound. ${ev.type}:`, iterCount);
-    iterCount++;
-
-    volumeHold();
-
-    $SOUND.load(); // Reset.
-    $SOUND.play();
-
-    clearTimeouts();
-
-    // Inhale .. hold.
-    timers.playIn = setTimeout(() => volumeBreathe(), IN_PLAY_OFFSET);
-    timers.stopIn = setTimeout(() => volumeHold(), IN_STOP_OFFSET);
-
-    // Exhale .. hold.
-    timers.playEx = setTimeout(() => volumeBreathe(), EX_PLAY_OFFSET);
-    timers.stopEx = setTimeout(() => volumeHold(), EX_STOP_OFFSET);
+  get #volumes () {
+    return {
+      breathe: 0.25,
+      hold: 0.03
+    };
   }
 
-  function volumeHold () {
-    adjustVolume($SOUND, VOLUME.hold, { duration })
+  connectedCallback () {
+    this.#audioElem = this.#getAudioElement();
+
+    if (!this.#audioElem) {
+      console.debug('SoundManager -', 'no sound');
+      return;
+    }
+
+    window.addEventListener(`${this.#eventPfx}play`, (ev) => this.#onPlayEvent(ev));
+    window.addEventListener(`${this.#eventPfx}pause`, (ev) => this.#onPauseEvent(ev));
+
+    console.debug('SoundManager', [this]);
+  }
+
+  #getAudioElement () {
+    const audioElems = this.querySelectorAll('audio[ data-id ]');
+    console.assert(audioElems.length, 'Expecting at least one audio element.');
+    const audioElem = this.#soundParam ? [...audioElems].find(aud => aud.dataset.id === this.#soundParam) : null;
+
+    console.debug('SoundManager:', this.#soundParam, audioElems, audioElem);
+    return audioElem;
+  }
+
+  #volumeHold () {
+    adjustVolume(this.#audioElem, this.#volumes.hold, { duration })
       .then(el => console.debug('Hold ~ volume:', el.volume));
   }
 
-  function volumeBreathe () {
-    adjustVolume($SOUND, VOLUME.breathe, { duration })
+  #volumeBreathe () {
+    adjustVolume(this.#audioElem, this.#volumes.breathe, { duration })
       .then(el => console.debug('Breathe ~ volume:', el.volume));
   }
 
-  function clearTimeouts () {
-    for (const it in timers) {
-      if (timers[it]) {
-        clearTimeout(timers[it]);
-        timers[it] = null;
+  #clearTimeouts () {
+    for (const it in this.#timers) {
+      if (this.#timers[it]) {
+        clearTimeout(this.#timers[it]);
+        this.#timers[it] = null;
       }
     }
   }
+
+  #onPlayEvent (ev) {
+    console.debug(`>> sound. ${ev.type}:`, this.#iterCount, ev);
+    this.#iterCount++;
+
+    this.#volumeHold();
+
+    this.#audioElem.load(); // Reset.
+    this.#audioElem.play();
+
+    this.#clearTimeouts();
+
+    // Inhale .. hold.
+    this.#timers.playIn = setTimeout(() => this.#volumeBreathe(), IN_PLAY_OFFSET);
+    this.#timers.stopIn = setTimeout(() => this.#volumeHold(), IN_STOP_OFFSET);
+
+    // Exhale .. hold.
+    this.#timers.playEx = setTimeout(() => this.#volumeBreathe(), EX_PLAY_OFFSET);
+    this.#timers.stopEx = setTimeout(() => this.#volumeHold(), EX_STOP_OFFSET);
+  }
+
+  #onPauseEvent (ev) {
+    console.debug('>> sound.', ev.type, ev);
+
+    this.#audioElem.pause();
+
+    this.#clearTimeouts();
+  }
 }
 
-function param (regex, def = null) {
-  const MATCHES = QUERY.match(regex);
-
-  return MATCHES ? MATCHES[1] : def;
-}
+export default SoundManagerElement;
